@@ -1,0 +1,592 @@
+/* ============================================================
+   TRANS-KOP - RENTAL (WYNAJEM) STYLES - LIGHT THEME V2
+   Polished, Professional & Interactive
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   ANIMATIONS & INTERACTION (NEW)
+   ------------------------------------------------------------ */
+
+/* 1. SCROLL REVEAL 
+   Initial state: Invisible and pushed down */
+.js-reveal-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000), 
+                transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    will-change: opacity, transform;
+}
+
+/* Final state: Visible and in place */
+.js-reveal-card.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggering delays (optional helpers) */
+.js-reveal-card[data-delay="100"] { transition-delay: 0.1s; }
+.js-reveal-card[data-delay="200"] { transition-delay: 0.2s; }
+.js-reveal-card[data-delay="300"] { transition-delay: 0.3s; }
+
+
+/* 2. CARD INTERACTION (Hover & Focus) */
+.category-card,
+.machine-card {
+    cursor: pointer; /* Indicates clickable area */
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                border-color 0.3s ease;
+}
+
+/* Lift Up & Shadow on Hover/Focus */
+.category-card:hover,
+.category-card:focus-within,
+.machine-card:hover,
+.machine-card:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(245, 196, 0, 0.5); /* Subtle primary color border */
+}
+
+/* Image Brightness/Zoom Effect */
+.category-card:hover .category-bg-img,
+.category-card:focus-within .category-bg-img,
+.machine-card:hover .machine-card__img-box img,
+.machine-card:focus-within .machine-card__img-box img {
+    filter: brightness(1.05);
+    transform: scale(1.05);
+}
+
+/* Ensure outline visibility for keyboard navigation */
+.category-card:focus-within,
+.machine-card:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+
+/* ------------------------------------------------------------
+   CATALOG LAYOUT
+   ------------------------------------------------------------ */
+.catalog-section {
+    background-color: #f8f9fb;
+    color: #333;
+    padding: 60px 0;
+}
+
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ------------------------------------------------------------
+   SIDEBAR FILTERS
+   ------------------------------------------------------------ */
+.catalog-sidebar {
+    background-color: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 12px;
+    padding: 25px;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.filter-group {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.filter-group:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+
+.filter-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-options { list-style: none; padding: 0; }
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #555;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+.filter-option:hover { color: #000; }
+.filter-option.active { font-weight: 600; color: #000; }
+
+/* Custom Checkbox */
+.filter-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: #fff;
+}
+.filter-option:hover .filter-checkbox { border-color: #bbb; }
+.filter-option.active .filter-checkbox {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.filter-option.active .filter-checkbox::after {
+    content: '\f00c'; /* FontAwesome check */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 10px;
+    color: #000;
+}
+
+.filter-count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #999;
+    background: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* Widget Contact in Sidebar */
+.sidebar-contact {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    padding: 25px;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.sidebar-contact h4 { color: var(--color-primary); margin-bottom: 10px; font-size: 1.2rem; }
+.sidebar-contact p { color: #ccc; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5; }
+.sidebar-contact .phone { 
+    font-size: 1.4rem; font-weight: 700; color: #fff; display: block; margin-bottom: 15px; 
+    font-family: 'Oswald', sans-serif;
+}
+
+/* ------------------------------------------------------------
+   CATALOG HEADER
+   ------------------------------------------------------------ */
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.catalog-header p { font-size: 1rem; color: #666; margin: 0; }
+.catalog-header strong { color: #000; }
+
+.sort-select {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------
+   MACHINE CARD (Refined)
+   ------------------------------------------------------------ */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.machine-card {
+    background: #fff;
+    border: 1px solid #e8ebf0;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+/* Image Area */
+.machine-card__img-box {
+    height: 240px;
+    padding: 35px; /* Więcej oddechu, żeby img nie wchodził na tag */
+    background: linear-gradient(to bottom, #fbfbfb, #f0f0f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.machine-card__img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.5s;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+    z-index: 1;
+}
+
+/* Tag */
+.machine-card__tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--color-dark); /* Ciemny tag dla kontrastu */
+    color: var(--color-primary);
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+    z-index: 5; /* Nad zdjęciem */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Content */
+.machine-card__content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.machine-card__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #111;
+    transition: color 0.3s;
+}
+.machine-card:hover .machine-card__title { color: var(--color-primary-dark); }
+
+.machine-card__desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pycha specyfikację na dół */
+}
+
+/* Specs Grid */
+.machine-card__specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #444;
+    font-weight: 600;
+    background: #f9f9f9;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+.spec-item i { color: var(--color-primary-dark); font-size: 0.9rem; }
+
+/* Button */
+.machine-card .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 0.9rem;
+    background: transparent;
+    color: #111;
+    border: 2px solid #eee;
+    box-shadow: none;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.machine-card:hover .btn {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #000;
+    box-shadow: 0 5px 15px rgba(245, 196, 0, 0.3);
+}
+
+/* ------------------------------------------------------------
+   HOME RENTAL CATEGORIES (Landing Page) - LIGHT THEME V2
+   ------------------------------------------------------------ */
+
+.rental-categories {
+    background-color: #f8f9fb; /* Jasne tło */
+    padding: 80px 0;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* KARTA KATEGORII - WYSOKA I ELEGANCKA */
+.category-card {
+    position: relative;
+    height: 480px; 
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Area - Top 55% */
+.category-bg {
+    height: 55%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Tag na zdjęciu */
+.category-tag-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-primary);
+    color: var(--color-dark);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Content Area - Bottom 45% */
+.category-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.category-content h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+}
+
+.category-content h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--color-primary);
+    margin-top: 10px;
+    transition: width 0.3s ease;
+}
+
+.category-card:hover .category-content h3::after {
+    width: 80px;
+}
+
+.category-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.category-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.category-tags li {
+    background: #f4f4f4;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.category-card:hover .category-tags li {
+    background: #fffBE6; /* Jasny żółty */
+    color: #8a6d00;
+}
+
+.category-card .btn {
+    align-self: start;
+    background: transparent;
+    color: var(--color-dark);
+    border: 2px solid #eee;
+    padding: 12px 24px;
+    font-size: 13px;
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+.category-card:hover .btn {
+    background: var(--color-dark);
+    color: #fff;
+    border-color: var(--color-dark);
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------------------------------------
+   CONTENT AREA & OTHER HELPERS
+   ------------------------------------------------------------ */
+.content-area {
+    background: var(--color-white);
+    border: 2px solid var(--color-gray-200);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- COMPACT HERO (Minimalist) --- */
+.page-hero--compact {
+    height: 35vh;
+    min-height: 280px;
+    background: #111; /* Fallback or solid color if no image */
+    display: flex;
+    align-items: flex-end; /* Content at bottom */
+    padding-bottom: 40px;
+}
+
+.page-hero--compact .page-hero__background img {
+    opacity: 0.4; /* Darker/subtler background image */
+}
+
+.page-hero--compact .page-hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-hero--compact .breadcrumbs {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.page-hero--compact .breadcrumbs a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.page-hero--compact .breadcrumbs a:hover {
+    color: var(--color-primary);
+}
+
+/* --- SIDEBAR BACK BUTTON --- */
+.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-back i {
+    font-size: 0.8rem;
+    color: var(--color-primary-dark);
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------------------ */
+@media (max-width: 992px) {
+    .catalog-layout { grid-template-columns: 1fr; }
+    .catalog-sidebar { position: static; margin-bottom: 40px; }
+    .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    .machine-card__img-box { height: 220px; }
+}
+
+@media (max-width: 768px) {
+    .categories-grid { grid-template-columns: 1fr; gap: 40px; }
+    .category-card { height: auto; min-height: 450px; }
+    .category-bg { height: 250px; }
+    
+    .page-hero--compact {
+        height: auto;
+        min-height: 220px;
+        padding-top: 80px; /* Header space */
+    }
+    .page-hero--compact .page-hero__title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .catalog-grid { grid-template-columns: 1fr; }
+    .catalog-section { padding: 40px 0; }
+    .machine-card__title { font-size: 1.25rem; }
+}

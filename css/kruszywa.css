@@ -1,0 +1,353 @@
+/* ============================================================
+   TERRA MAX - KRUSZYWA & TRANSPORT STYLES
+   Extends: home.css
+   ============================================================ */
+
+/* ==================== PAGE HERO ==================== */
+.page-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 0; /* Header is fixed/transparent */
+}
+
+.page-hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.page-hero__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30, 30, 30, 0.9) 0%,
+    rgba(30, 30, 30, 0.6) 100%
+  );
+}
+
+/* Yellow Skew Bottom */
+.page-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--color-primary);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+  z-index: 2;
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 3;
+  padding-top: 100px; /* Increased from 60px for better spacing from header when zoomed */
+}
+
+.page-hero__title {
+  color: var(--color-white);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin-bottom: 15px;
+}
+
+.page-hero__subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.2rem;
+  max-width: 600px;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 20px;
+}
+
+/* ==================== CATALOG GRID ==================== */
+.catalog {
+  padding: var(--section-padding) 0;
+  background-color: var(--color-white);
+}
+
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Tighter grid */
+  gap: 24px; /* Compact padding match */
+}
+
+.product-card {
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s var(--ease-tech);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  /* Sharp edges */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg), var(--glow-box); /* WOW Glow Added */
+  border-bottom: 3px solid var(--color-primary);
+  z-index: 2;
+}
+
+.product-card__image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  /* Cut corner top left */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-tech);
+}
+
+.product-card:hover .product-card__image img {
+  transform: scale(1.1);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  padding: 5px 12px;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-card__badge--eco {
+  background: #4caf50;
+  color: #fff;
+}
+
+.product-card__content {
+  padding: 24px; /* Compact padding */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card__title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--color-dark);
+}
+
+.product-card__specs {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.product-card__specs li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-card__specs i {
+  color: var(--color-primary);
+  font-size: 12px;
+}
+
+.btn--full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ==================== LOGISTICS (Dark Section) ==================== */
+.logistics {
+  background: var(--color-dark);
+  color: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+
+.logistics__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logistics__content {
+  width: 50%;
+  padding: 100px calc((100% - 1400px) / 2 + 24px) 100px 40px; /* Smart padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logistics__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.logistics-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--color-primary);
+  transition: 0.3s;
+}
+
+.logistics-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle lift */
+}
+
+.logistics-item__icon {
+  font-size: 24px;
+  color: var(--color-primary);
+  padding-top: 3px;
+}
+
+.logistics-item__title {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.logistics-item__text {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.logistics__info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logistics__image {
+  width: 50%;
+  position: relative;
+  min-height: 600px;
+}
+
+.logistics__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Clip path for diagonal cut */
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.logistics__badge {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background: var(--color-primary);
+  padding: 20px 30px;
+  color: var(--color-dark);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+}
+
+.logistics__badge strong {
+  display: block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+}
+
+.logistics__badge span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ==================== CTA SIMPLE ==================== */
+.cta-simple {
+  padding: 60px 0;
+  background: var(--color-light);
+  border-top: 1px solid #ddd;
+}
+
+.cta-simple__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--color-primary);
+  transition: transform 0.4s var(--ease-tech);
+}
+
+.cta-simple__box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-simple__text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--color-dark);
+}
+
+.cta-simple__text p {
+  color: #666;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+  .logistics__container {
+    flex-direction: column;
+  }
+  .logistics__content,
+  .logistics__image {
+    width: 100%;
+  }
+  .logistics__content {
+    padding: 60px 24px;
+  }
+  .logistics__image {
+    min-height: 300px;
+    order: -1; /* Image on top on mobile */
+  }
+  .logistics__image img {
+    clip-path: none;
+  }
+  .cta-simple__box {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
