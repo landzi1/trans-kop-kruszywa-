@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/icons/logo-transparent.png">
+  <meta name="description" content="Blog Trans-Kop: porady o robotach ziemnych, kruszywach drogowych oraz wynajmie koparek i sprzętu budowlanego na Śląsku. Sprawdź praktyczne wskazówki dla inwestorów i wykonawców." />
+  <meta name="keywords" content="blog, roboty ziemne, kruszywa, wynajem koparek, poradnik budowlany, Śląsk, Mikołów">
+  <link rel="canonical" href="https://trans-kop.pl/blog.html">
+  <title>Blog – roboty ziemne, kruszywa, wynajem sprzętu | Trans-Kop</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="header__container container">
+      <a href="index.html" class="header__logo">
+        <div class="logo-icon">
+          <img src="assets/icons/logo-transparent.png" alt="Logo">
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">TRANS<span class="logo-hyphen">-</span><strong>KOP</strong></span>
+          <span class="logo-tagline">Stokowski</span>
+        </div>
+      </a>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Start</a></li>
+          <li><a href="roboty.html" class="nav__link">Roboty Ziemne</a></li>
+          <li><a href="kruszywa.html" class="nav__link">Kruszywa</a></li>
+          <li><a href="wynajem.html" class="nav__link">Wynajem</a></li>
+          <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+          <li><a href="blog.html" class="nav__link active">Blog</a></li>
+          <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="kontakt.html#wycena" class="header__cta btn btn--primary btn--glow">
+          <i class="fas fa-calculator"></i>
+          <span class="desktop-only">Wycena</span>
+        </a>
+        <a href="tel:+48123456789" class="header__phone btn btn--outline-light">
+          <i class="fas fa-phone-alt"></i>
+          <span>+48 123 456 789</span>
+        </a>
+      </div>
+
+      <button class="header__burger" id="burgerBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+    <!-- Floating Phone Button (Mobile) -->
+    <a href="tel:+48123456789" class="floating-phone">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+  <main class="blog-main">
+    <!-- ==================== BLOG HERO ==================== -->
+    <section class="blog-hero">
+      <div class="blog-hero__background">
+        <img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?q=80&w=1920" alt="Plac budowy w otoczeniu drzew i ciężki sprzęt w pracy">
+        <div class="blog-hero__overlay"></div>
+      </div>
+      <div class="container blog-hero__content reveal">
+        <span class="section-tag section-tag--glow">AKTUALNOŚCI I PORADY</span>
+        <h1>BLOG TRANS-<span class="blog-hero__accent">KOP</span></h1>
+        <p class="blog-hero__lead">
+          Praktyczne wskazówki dla inwestorów i wykonawców: roboty ziemne, kruszywa i wynajem sprzętu.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== BLOG LIST ==================== -->
+    <section class="blog-list">
+      <div class="container">
+        <div class="blog-filter-bar">
+          <button class="filter-chip active" data-filter="all">Wszystkie</button>
+          <button class="filter-chip" data-filter="roboty-ziemne">Roboty ziemne</button>
+          <button class="filter-chip" data-filter="kruszywa">Kruszywa</button>
+          <button class="filter-chip" data-filter="wynajem">Wynajem sprzętu</button>
+        </div>
+
+        <div class="blog-list__header">
+          <div class="blog-list__header-text">
+            <span class="section-tag">Przewodnik inwestora</span>
+            <p class="blog-list__lead">
+              Stałe aktualizacje o robotach ziemnych, kruszywach i wynajmie sprzętu. Krótkie, konkretne poradniki, które pomogą
+              przygotować budowę i uniknąć opóźnień.
+            </p>
+          </div>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card reveal" data-category="roboty-ziemne">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200" alt="Przygotowanie terenu pod budowę domu koparką gąsienicową">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="fas fa-calendar-alt"></i> 15.11.2025</span>
+                <span class="blog-card__category">ROBOTY ZIEMNE</span>
+              </div>
+              <h2 class="blog-card__title">Jak przygotować teren pod budowę domu – kluczowe etapy robót ziemnych</h2>
+              <p class="blog-card__excerpt">
+                Od badań gruntu i wytyczenia ław fundamentowych, przez korytowanie i zabezpieczenie wykopów, aż po zagęszczenie podbudowy.
+                Sprawdź listę kontroli, która ułatwia rozmowę z wykonawcą i inspektorem nadzoru.
+              </p>
+              <a class="blog-card__link" href="blog/blog-jak-przygotowac-teren-pod-budowe-domu-kluczowe-etapy-robot-ziemnych.html">
+                CZYTAJ WIĘCEJ <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" data-delay="100" data-category="kruszywa">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200" alt="Kruszywa drogowe składowane na placu budowy">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="fas fa-calendar-alt"></i> 05.11.2025</span>
+                <span class="blog-card__category">KRUSZYWA</span>
+              </div>
+              <h2 class="blog-card__title">Kruszywa drogowe na podjazd i parking – które frakcje wybrać?</h2>
+              <p class="blog-card__excerpt">
+                Piasek zasypowy, żwir na warstwę odsączającą, tłuczeń i kliniec do podbudowy – dobór materiałów zależy od nośności gruntu
+                i zakładanego obciążenia. Podpowiadamy, jak planować grubości warstw i zamówić właściwy transport.
+              </p>
+              <a class="blog-card__link" href="blog/blog-kruszywa-drogowe-na-podjazd-i-parking-ktore-frakcje-wybrac.html">
+                CZYTAJ WIĘCEJ <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" data-delay="200" data-category="wynajem">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200" alt="Koparka wynajęta z operatorem na budowie">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="fas fa-calendar-alt"></i> 28.10.2025</span>
+                <span class="blog-card__category">WYNAJEM SPRZĘTU</span>
+              </div>
+              <h2 class="blog-card__title">Wynajem koparki z operatorem czy bez? Poradnik inwestora</h2>
+              <p class="blog-card__excerpt">
+                Kiedy warto postawić na doświadczonego operatora, a kiedy wybrać wynajem bez obsługi? Omawiamy koszty, wymagane uprawnienia,
+                ryzyko przestojów i kwestie ubezpieczenia OC, by prace ziemne przebiegły bez niespodzianek.
+              </p>
+              <a class="blog-card__link" href="blog/blog-wynajem-koparki-z-operatorem-czy-bez-poradnik-inwestora.html">
+                CZYTAJ WIĘCEJ <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" data-delay="300" data-category="roboty-ziemne">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1600267185393-e158a98703de?q=80&w=1200" alt="Stabilizacja gruntu pod drogę tymczasową">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="fas fa-calendar-alt"></i> 18.10.2025</span>
+                <span class="blog-card__category">INŻYNIERIA GRUNTU</span>
+              </div>
+              <h2 class="blog-card__title">Stabilizacja gruntu na słabym podłożu – jak uniknąć osiadania</h2>
+              <p class="blog-card__excerpt">
+                Wymiana humusu to za mało? Wyjaśniamy, kiedy zastosować stabilizację cementem, geowłókniny i zagęszczanie warstwowe.
+                Dzięki temu podbudowa pod drogi tymczasowe i płyty fundamentowe zachowa nośność przez lata.
+              </p>
+              <a class="blog-card__link" href="blog/blog-stabilizacja-gruntu-na-slabym-podlozu-jak-uniknac-osiadania.html">
+                CZYTAJ WIĘCEJ <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" data-delay="400" data-category="kruszywa">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200" alt="Transport kruszyw ciężarówką wywrotką">
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="fas fa-calendar-alt"></i> 09.10.2025</span>
+                <span class="blog-card__category">TRANSPORT</span>
+              </div>
+              <h2 class="blog-card__title">Logistyka dostaw kruszyw na budowę – jak planuje to Trans-Kop</h2>
+              <p class="blog-card__excerpt">
+                Harmonogramowanie transportów wywrotek, kontrola tonażu i wyznaczanie tras objazdowych to klucz do terminowych dostaw.
+                Zobacz, jak koordynujemy logistykę, by kruszywa drogowe i betonowe dotarły na czas bez przestojów ekip.
+              </p>
+              <a class="blog-card__link" href="blog/blog-logistyka-dostaw-kruszyw-na-budowe-jak-planuje-to-trans-kop.html">
+                CZYTAJ WIĘCEJ <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODUŁ A: TEKST + ZDJĘCIE ==================== -->
+    <section class="blog-split">
+      <div class="container">
+        <div class="blog-split__grid">
+          <div class="blog-split__content reveal">
+            <h2>Roboty ziemne, kruszywa i wynajem w jednym miejscu</h2>
+            <p>Realizujemy wykopy, niwelację i przygotowanie fundamentów z kontrolą GPS, dbając o właściwe spadki i terminowość prac.</p>
+            <p>Dostarczamy certyfikowane kruszywa i zapewniamy wynajem koparek, ładowarek oraz walców z doświadczonym operatorem.</p>
+          </div>
+          <div class="blog-split__image reveal" data-delay="120">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200" alt="Koparka podczas robót ziemnych">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODUŁ B: IKONY ==================== -->
+    <section class="blog-facts">
+      <div class="container">
+        <div class="blog-facts__grid">
+          <div class="fact-card reveal">
+            <i class="fas fa-industry"></i>
+            <div class="fact-card__text">
+              <h3>20 lat doświadczenia</h3>
+              <p>Roboty ziemne dla dróg, hal, domów i sieci.</p>
+            </div>
+          </div>
+          <div class="fact-card reveal" data-delay="80">
+            <i class="fas fa-ruler-combined"></i>
+            <div class="fact-card__text">
+              <h3>Niwelacja i wykopy GPS</h3>
+              <p>Kontrola wysokości i spadków na każdym etapie.</p>
+            </div>
+          </div>
+          <div class="fact-card reveal" data-delay="160">
+            <i class="fas fa-cubes"></i>
+            <div class="fact-card__text">
+              <h3>Certyfikowane kruszywa</h3>
+              <p>Piasek, żwir, tłuczeń i kliniec do podbudów.</p>
+            </div>
+          </div>
+          <div class="fact-card reveal" data-delay="240">
+            <i class="fas fa-truck-monster"></i>
+            <div class="fact-card__text">
+              <h3>Wynajem maszyn z operatorem</h3>
+              <p>Koparki, ładowarki, walce i transport kruszyw.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODUŁ C: PANORAMA ==================== -->
+    <section class="blog-panorama">
+      <div class="blog-panorama__bg">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1920" alt="Panoramiczne ujęcie placu budowy z koparką">
+        <div class="blog-panorama__overlay"></div>
+      </div>
+    </section>
+
+    <!-- ==================== MODUŁ D: KRÓTKI BOX ==================== -->
+    <section class="blog-intro">
+      <div class="container">
+        <div class="blog-intro__panel reveal">
+          <h2 class="blog-intro__title">Przewodnik inwestora – sprawdzone informacje z budowy</h2>
+          <p>Dowiedz się, jak zaplanować roboty ziemne i podbudowy z kruszyw, by uniknąć poprawek i opóźnień.</p>
+          <p>Sprawdź, jak działa wynajem maszyn z operatorem oraz jak zamówić transport kruszyw we właściwych frakcjach.</p>
+          <p>Wszystko w jednym miejscu: praktyczne checklisty, listy kontrolne i krótkie poradniki dla inwestorów.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo">
+              <div class="logo-icon">
+                <img src="assets/icons/logo-transparent.png" alt="Logo">
+              </div>
+              <div class="logo-text">
+                <span class="logo-name">TRANS<span class="logo-hyphen">-</span><strong>KOP</strong></span>
+              </div>
+            </a>
+            <p class="footer__about">
+              Kompleksowe usługi budowlane - roboty ziemne, sprzedaż kruszyw i wynajem profesjonalnego sprzętu. Działamy nieprzerwanie od 2005 roku.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer__nav">
+            <h4 class="footer__heading">Usługi</h4>
+            <ul class="footer__links">
+              <li><a href="roboty.html"><i class="fas fa-chevron-right"></i> Roboty Ziemne</a></li>
+              <li><a href="kruszywa.html"><i class="fas fa-chevron-right"></i> Sprzedaż Kruszyw</a></li>
+              <li><a href="wynajem.html"><i class="fas fa-chevron-right"></i> Wynajem Sprzętu</a></li>
+              <li><a href="flota.html"><i class="fas fa-chevron-right"></i> Katalog Maszyn</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__nav">
+            <h4 class="footer__heading">Firma</h4>
+            <ul class="footer__links">
+              <li><a href="o-firmie.html"><i class="fas fa-chevron-right"></i> O Nas</a></li>
+              <li><a href="realizacje.html"><i class="fas fa-chevron-right"></i> Realizacje</a></li>
+              <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+              <li><a href="kontakt.html"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+              <li><a href="kontakt.html#wycena"><i class="fas fa-chevron-right"></i> Bezpłatna Wycena</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__contact">
+            <h4 class="footer__heading">Kontakt</h4>
+            <div class="footer__contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Adres siedziby</strong>
+                <span>ul. Pszczyńska 15, 43-190 Mikołów</span>
+              </div>
+            </div>
+            <div class="footer__contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <strong>Telefon</strong>
+                <a href="tel:+48123456789">+48 123 456 789</a>
+              </div>
+            </div>
+            <div class="footer__contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>E-mail</strong>
+                <a href="mailto:biuro@terramax.pl">biuro@terramax.pl</a>
+              </div>
+            </div>
+            <div class="footer__contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>Godziny pracy</strong>
+                <span>Pon-Pt: 7:00-17:00 | Sob: 8:00-14:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-content">
+          <p class="footer__copyright">
+            &copy; 2025 TRANS-KOP. Wszelkie prawa zastrzeżone.
+          </p>
+          <div class="footer__legal">
+            <a href="#">Polityka Prywatności</a>
+            <a href="#">Regulamin</a>
+            <a href="#">RODO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Wróć na górę">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/blog.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

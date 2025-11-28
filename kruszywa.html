@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/icons/logo-transparent.png">
+    <meta name="description" content="Sprzedaż kruszyw budowlanych z dostawą - piasek, żwir, tłuczeń, kliniec. Transport 1-27 ton. Szybka dostawa na Śląsku i w okolicach.">
+    <meta name="keywords" content="kruszywa budowlane, piasek, żwir, tłuczeń, kliniec, dostawa kruszyw, Śląsk, Mikołów">
+    <link rel="canonical" href="https://trans-kop.pl/kruszywa.html">
+    <meta
+      name="description"
+      content="Sprzedaż i transport kruszyw budowlanych. Piasek, żwir, tłuczeń, pospółka, ziemia. Własna flota transportowa. Piaseczno i całe Mazowsze."
+    />
+    <title>Kruszywa Budowlane i Drogowe | TRANS-KOP</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- Baza (Header/Footer/Variables/Animations) -->
+    <link rel="stylesheet" href="css/kruszywa.css" />
+    <!-- Style dedykowane -->
+  </head>
+  <body>
+        <!-- ==================== HEADER ==================== -->
+        <header class="header" id="header">
+            <div class="header__container container">
+                <a href="index.html" class="header__logo">
+                    <div class="logo-icon">
+                        <img src="assets/icons/logo-transparent.png" alt="Logo">
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">TRANS<span class="logo-hyphen">-</span><strong>KOP</strong></span>
+                        <span class="logo-tagline">Stokowski</span>
+                    </div>
+                </a>
+    
+                <nav class="header__nav" id="mainNav">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="nav__link">Start</a></li>
+                        <li><a href="roboty.html" class="nav__link">Roboty Ziemne</a></li>
+                        <li><a href="kruszywa.html" class="nav__link active">Kruszywa</a></li>
+                        <li><a href="wynajem.html" class="nav__link">Wynajem</a></li>
+                        <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+                        <li><a href="blog.html" class="nav__link">Blog</a></li>
+                        <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="header__actions">
+                    <a href="kontakt.html#wycena" class="header__cta btn btn--primary btn--glow">
+                        <i class="fas fa-calculator"></i>
+                        <span class="desktop-only">Wycena</span>
+                    </a>
+                    <a href="tel:+48123456789" class="header__phone btn btn--outline-light">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+48 123 456 789</span>
+                    </a>
+                </div>
+    
+                <button class="header__burger" id="burgerBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+    <!-- Floating Phone Button (Mobile) -->
+    <a href="tel:+48123456789" class="floating-phone">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <!-- ==================== PAGE HERO ==================== -->
+    <section class="page-hero">
+      <div class="page-hero__background">
+        <img
+          src="https://images.unsplash.com/photo-1524234599372-a5bd0194758d?q=80&w=1920"
+          alt="Hałdy kruszywa"
+        />
+        <div class="page-hero__overlay"></div>
+      </div>
+      <div class="container page-hero__content reveal">
+        <span class="section-tag section-tag--glow">Oferta Handlowa</span>
+        <h1 class="page-hero__title">Kruszywa Budowlane<br />i Drogowe</h1>
+        <h2 class="page-hero__subtitle">
+          Sprzedaż hurtowa i detaliczna z transportem do klienta
+        </h2>
+      </div>
+    </section>
+
+    <!-- ==================== CATALOG GRID ==================== -->
+    <section class="catalog" id="katalog">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-tag">Asortyment</span>
+          <h2 class="section-title">Wybierz Materiał</h2>
+          <p class="section-desc">
+            Oferujemy certyfikowane kruszywa z najlepszych kopalni. Gwarantujemy
+            czystość materiału i zgodność z normami budowlanymi.
+          </p>
+        </div>
+
+        <div class="catalog__grid">
+          <!-- Beton kruszony -->
+          <div class="product-card reveal" data-delay="0">
+            <div class="product-card__image">
+              <img src="https://images.pexels.com/photos/7031705/pexels-photo-7031705.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Beton kruszony" />
+              <div class="product-card__badge product-card__badge--eco">Recykling</div>
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Beton kruszony</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Drogi tymczasowe</li>
+                <li><i class="fas fa-check"></i> Podbudowy pomocnicze</li>
+                <li><i class="fas fa-check"></i> Tanie utwardzenia</li>
+              </ul>
+              <a href="produkty/produkt-beton-kruszony.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+
+          <!-- Tłuczeń -->
+          <div class="product-card reveal" data-delay="100">
+            <div class="product-card__image">
+              <img src="assets/kruszywa/tluczen.png" alt="Tłuczeń" />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Tłuczeń 31-63</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Podbudowy dróg</li>
+                <li><i class="fas fa-check"></i> Place i parkingi</li>
+                <li><i class="fas fa-check"></i> Stabilizacja gruntu</li>
+              </ul>
+              <a href="produkty/produkt-tluczen.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+
+          <!-- Dolomit -->
+          <div class="product-card reveal" data-delay="200">
+            <div class="product-card__image">
+              <img src="https://images.pexels.com/photos/11755680/pexels-photo-11755680.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Dolomit" />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Dolomit</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Pod kostkę brukową</li>
+                <li><i class="fas fa-check"></i> Podbudowy jasne</li>
+                <li><i class="fas fa-check"></i> Stabilizacja podłoża</li>
+              </ul>
+              <a href="produkty/produkt-dolomit.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+
+          <!-- Ziemia przesiewana -->
+          <div class="product-card reveal" data-delay="300">
+            <div class="product-card__image">
+              <img src="https://images.pexels.com/photos/6681877/pexels-photo-6681877.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ziemia przesiewana" />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Ziemia przesiewana</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Trawniki i rabaty</li>
+                <li><i class="fas fa-check"></i> Wyrównanie terenu</li>
+                <li><i class="fas fa-check"></i> Nasadzenia</li>
+              </ul>
+              <a href="produkty/produkt-ziemia-przesiewana.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+
+          <!-- Fres asfaltowy -->
+          <div class="product-card reveal" data-delay="400">
+            <div class="product-card__image">
+              <img src="https://images.pexels.com/photos/421927/pexels-photo-421927.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Frez asfaltowy" />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Frez asfaltowy</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Drogi tymczasowe</li>
+                <li><i class="fas fa-check"></i> Place technologiczne</li>
+                <li><i class="fas fa-check"></i> Ekonomiczne utwardzenie</li>
+              </ul>
+              <a href="produkty/produkt-fres-asfaltowy.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+
+          <!-- Piasek -->
+          <div class="product-card reveal" data-delay="500">
+            <div class="product-card__image">
+              <img src="https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Piasek" />
+              <div class="product-card__badge">Bestseller</div>
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Piasek płukany 0-2</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Wylewki i tynki</li>
+                <li><i class="fas fa-check"></i> Murowanie</li>
+                <li><i class="fas fa-check"></i> Podsypki</li>
+              </ul>
+              <a href="produkty/produkt-piasek.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+
+          <!-- Żwir -->
+          <div class="product-card reveal" data-delay="600">
+            <div class="product-card__image">
+              <img src="assets/kruszywa/zwir.png" alt="Żwir" />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Żwir 8-16</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Beton i prefabrykaty</li>
+                <li><i class="fas fa-check"></i> Drenaże</li>
+                <li><i class="fas fa-check"></i> Dekoracja</li>
+              </ul>
+              <a href="produkty/produkt-zwir.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+
+          <!-- Kruszywa drogowe -->
+          <div class="product-card reveal" data-delay="700">
+            <div class="product-card__image">
+              <img src="assets/kruszywa/kruszywa-drogowe.png" alt="Kruszywa drogowe" />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Kruszywa drogowe</h3>
+              <ul class="product-card__specs">
+                <li><i class="fas fa-check"></i> Mieszanki 0/31 i 0/63</li>
+                <li><i class="fas fa-check"></i> Kliniec, tłuczeń</li>
+                <li><i class="fas fa-check"></i> Dostawy ciągłe</li>
+              </ul>
+              <a href="produkty/produkt-kruszywa-drogowe.html" class="btn btn--primary btn--full btn--glow">Zamów</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOGISTICS SECTION ==================== -->
+    <section class="logistics reveal" id="transport">
+      <div class="logistics__container">
+        <div class="logistics__content">
+          <span class="section-tag section-tag--glow">Logistyka i Dostawy</span>
+          <h2 class="section-title section-title--light">
+            Własna Flota<br />Transportowa
+          </h2>
+          <p class="section-desc" style="color: rgba(255, 255, 255, 0.7)">
+            Nie jesteśmy pośrednikiem. Posiadamy własny, nowoczesny tabor
+            samochodowy, co gwarantuje terminowość i elastyczność dostaw.
+            Realizujemy zlecenia od małych wywrotek po zestawy samowyładowcze.
+          </p>
+
+          <div class="logistics__grid">
+            <div class="logistics-item">
+              <div class="logistics-item__icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <div>
+                <h4 class="logistics-item__title">Małe Wywrotki</h4>
+                <p class="logistics-item__text">
+                  Dostawy od 1 do 5 ton. Idealne na wąskie posesje.
+                </p>
+              </div>
+            </div>
+
+            <div class="logistics-item">
+              <div class="logistics-item__icon">
+                <i class="fas fa-truck-monster"></i>
+              </div>
+              <div>
+                <h4 class="logistics-item__title">Wywrotki 3 i 4-osiowe</h4>
+                <p class="logistics-item__text">
+                  Ładowność do 20 ton. Napęd 6x6 i 8x8 na trudny teren.
+                </p>
+              </div>
+            </div>
+
+            <div class="logistics-item">
+              <div class="logistics-item__icon">
+                <i class="fas fa-trailer"></i>
+              </div>
+              <div>
+                <h4 class="logistics-item__title">
+                  Ciągniki z naczepą (Wanna)
+                </h4>
+                <p class="logistics-item__text">
+                  Transport hurtowy do 27 ton. Najniższy koszt tony.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="logistics__info">
+            <i class="fas fa-map-marked-alt"></i>
+            <span
+              >Obsługujemy: Piaseczno, Warszawa, Góra Kalwaria, Konstancin,
+              Pruszków i całe Mazowsze.</span
+            >
+          </div>
+        </div>
+
+        <div class="logistics__image">
+          <img
+            src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?q=80&w=1000"
+            alt="Wywrotka budowlana"
+          />
+          <div class="logistics__badge">
+            <strong>Szybka Dostawa</strong>
+            <span>nawet tego samego dnia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-simple">
+      <div class="container">
+        <div class="cta-simple__box reveal">
+          <div class="cta-simple__text">
+            <h3>Potrzebujesz wyceny materiału z transportem?</h3>
+            <p>
+              Zadzwoń do nas, doradzimy ilość i dobierzemy odpowiedni środek
+              transportu.
+            </p>
+          </div>
+          <div class="cta-simple__actions">
+            <a
+              href="tel:+48123456789"
+              class="btn btn--primary btn--lg btn--glow"
+            >
+              <i class="fas fa-phone"></i> +48 123 456 789
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo">
+                            <div class="logo-icon">
+                                <img src="assets/icons/logo-transparent.png" alt="Logo">
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-name">TRANS<span class="logo-hyphen">-</span><strong>KOP</strong></span>
+                            </div>
+                        </a>
+                        <p class="footer__about">
+                            Kompleksowe usługi budowlane - roboty ziemne, sprzedaż kruszyw i wynajem profesjonalnego sprzętu. Działamy nieprzerwanie od 2005 roku.
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__heading">Usługi</h4>
+                        <ul class="footer__links">
+                            <li><a href="roboty.html"><i class="fas fa-chevron-right"></i> Roboty Ziemne</a></li>
+                            <li><a href="kruszywa.html"><i class="fas fa-chevron-right"></i> Sprzedaż Kruszyw</a></li>
+                            <li><a href="wynajem.html"><i class="fas fa-chevron-right"></i> Wynajem Sprzętu</a></li>
+                            <li><a href="flota.html"><i class="fas fa-chevron-right"></i> Katalog Maszyn</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__heading">Firma</h4>
+                        <ul class="footer__links">
+                            <li><a href="o-firmie.html"><i class="fas fa-chevron-right"></i> O Nas</a></li>
+                            <li><a href="realizacje.html"><i class="fas fa-chevron-right"></i> Realizacje</a></li>
+                            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                            <li><a href="kontakt.html"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+                            <li><a href="kontakt.html#wycena"><i class="fas fa-chevron-right"></i> Bezpłatna Wycena</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contact">
+                        <h4 class="footer__heading">Kontakt</h4>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adres siedziby</strong>
+                                <span>ul. Pszczyńska 15, 43-190 Mikołów</span>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Telefon</strong>
+                                <a href="tel:+48123456789">+48 123 456 789</a>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>E-mail</strong>
+                                <a href="mailto:biuro@terramax.pl">biuro@terramax.pl</a>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Godziny pracy</strong>
+                                <span>Pon-Pt: 7:00-17:00 | Sob: 8:00-14:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        &copy; 2025 TRANS-KOP. Wszelkie prawa zastrzeżone.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="#">Polityka Prywatności</a>
+                        <a href="#">Regulamin</a>
+                        <a href="#">RODO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Wróć na górę">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/home.js"></script>
+  </body>
+</html>
