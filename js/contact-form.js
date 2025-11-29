@@ -155,7 +155,7 @@
       } catch (error) {
         console.error("Form submission error:", error);
         showMessage(
-          "Nie udało się wysłać wiadomości. Spróbuj ponownie lub zadzwoń: +48 123 456 789",
+          "Nie udało się wysłać wiadomości. Spróbuj ponownie lub zadzwoń: +48 789 426 796",
           "error"
         );
       } finally {

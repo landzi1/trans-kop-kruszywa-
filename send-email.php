@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Configuration - UPDATE THIS EMAIL ADDRESS
-$recipientEmail = 'biuro@trans-kop.pl'; // <<< ZMIEŃ NA WŁAŚCIWY EMAIL
+$recipientEmail = 'aaadam144@gmail.com'; // Email zarządcy
 $recipientName = 'TRANS-KOP';
 $fromEmail = 'noreply@trans-kop.pl';
 $fromName = 'Formularz TRANS-KOP';
@@ -242,8 +242,8 @@ HTML;
                             </p>
                             <p style="margin: 0 0 15px 0; color: #999; font-size: 13px; line-height: 1.6;">
                                 Kompleksowe roboty ziemne, sprzedaż kruszyw i wynajem sprzętu<br>
-                                <a href="tel:+48123456789" style="color: #FED700; text-decoration: none;">+48 123 456 789</a> |
-                                <a href="mailto:biuro@trans-kop.pl" style="color: #FED700; text-decoration: none;">biuro@trans-kop.pl</a>
+                                <a href="tel:+48789426796" style="color: #FED700; text-decoration: none;">+48 789 426 796</a> |
+                                <a href="mailto:aaadam144@gmail.com" style="color: #FED700; text-decoration: none;">aaadam144@gmail.com</a>
                             </p>
                             <p style="margin: 0; color: #666; font-size: 11px;">
                                 &copy; 2025 TRANS-KOP. Wszystkie prawa zastrzeżone.

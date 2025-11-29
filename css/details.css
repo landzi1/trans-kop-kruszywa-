@@ -332,9 +332,12 @@ table {
 
 .content-section.visible,
 .content-area.visible,
-.content-area.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+.content-area.reveal.visible,
+.content-area.active,
+.content-area.is-revealed,
+.content-area.reveal.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 .section-head {
@@ -382,9 +385,11 @@ table {
     list-style: none;
     padding: 0;
     margin: 20px 0;
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .check-list li {
@@ -422,6 +427,14 @@ table {
     height: 3px;
     background: var(--color-primary);
     box-shadow: var(--glow-primary);
+}
+
+/* Similar Links Section */
+.similar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 /* ============================================================
@@ -641,6 +654,31 @@ table {
     flex-direction: column;
 }
 
+/* Back Button */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-gray-700);
+    background: transparent;
+    border: 2px solid var(--color-gray-300);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    color: var(--color-dark);
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    transform: translateX(-5px);
+}
+
 .sidebar-widget,
 .widget-contact,
 .widget {
@@ -653,9 +691,13 @@ table {
 .widget-contact.visible,
 .widget.visible,
 .widget.reveal.visible,
-.widget-contact.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+.widget-contact.reveal.visible,
+.sidebar.active,
+.sidebar.is-revealed,
+.widget.active,
+.widget-contact.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* Navigation Widget */
@@ -739,14 +781,21 @@ table {
     margin-bottom: 12px;
 }
 
-.phone-display {
+.phone-display,
+.phone-big {
     display: block;
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: var(--color-dark);
     margin: 18px 0;
+    text-decoration: none;
     text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: color 0.3s ease;
+}
+
+.phone-big:hover {
+    color: var(--color-primary-dark);
 }
 
 /* CTA Button */
