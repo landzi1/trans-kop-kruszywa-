@@ -87,19 +87,22 @@
                 <div class="filter-group">
                     <h4 class="filter-title">Masa <i class="fas fa-chevron-down"></i></h4>
                     <ul class="filter-options">
-                        <li class="filter-option" data-filter-group="weight" data-filter-value="light"><span class="filter-checkbox"></span> < 5 ton</li>
-                        <li class="filter-option" data-filter-group="weight" data-filter-value="medium"><span class="filter-checkbox"></span> 5 - 15 ton</li>
-                        <li class="filter-option" data-filter-group="weight" data-filter-value="heavy"><span class="filter-checkbox"></span> > 15 ton</li>
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="light"><span class="filter-checkbox"></span> &lt; 5 t</li>
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="medium"><span class="filter-checkbox"></span> 5–15 t</li>
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="medium-heavy"><span class="filter-checkbox"></span> 15–25 t</li>
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="heavy"><span class="filter-checkbox"></span> &gt; 25 t</li>
                     </ul>
                 </div>
 
                 <div class="filter-group">
                     <h4 class="filter-title">Producent <i class="fas fa-chevron-down"></i></h4>
                     <ul class="filter-options">
-                        <li class="filter-option" data-filter-group="brand" data-filter-value="cat"><span class="filter-checkbox"></span> CAT</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="komatsu"><span class="filter-checkbox"></span> Komatsu</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="liebherr"><span class="filter-checkbox"></span> Liebherr</li>
                         <li class="filter-option" data-filter-group="brand" data-filter-value="volvo"><span class="filter-checkbox"></span> Volvo</li>
-                        <li class="filter-option" data-filter-group="brand" data-filter-value="jcb"><span class="filter-checkbox"></span> JCB</li>
-                        <li class="filter-option" data-filter-group="brand" data-filter-value="kubota"><span class="filter-checkbox"></span> Kubota</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="cat"><span class="filter-checkbox"></span> CAT</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="hitachi"><span class="filter-checkbox"></span> Hitachi</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="bobcat"><span class="filter-checkbox"></span> Bobcat</li>
                     </ul>
                 </div>
 
@@ -117,9 +120,11 @@
                     <div class="sort-box">
                         <select class="sort-select" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 6px;">
                             <option value="default">Popularność</option>
-                            <option value="az">Nazwa A-Z</option>
-                            <option value="weight_asc">Masa rosnąco</option>
-                            <option value="weight_desc">Masa malejąco</option>
+                            <option value="weight_asc">Masa ↑</option>
+                            <option value="weight_desc">Masa ↓</option>
+                            <option value="depth_desc">Głębokość kopania</option>
+                            <option value="power_desc">Moc (KM)</option>
+                            <option value="brand_az">Producent A-Z</option>
                         </select>
                     </div>
                 </div>

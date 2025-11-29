@@ -76,20 +76,26 @@
                 <a href="../wynajem.html" class="btn-back"><i class="fas fa-chevron-left"></i> Wróć do kategorii</a>
 
                 <div class="filter-group">
-                    <h4 class="filter-title">Pojemność łyżki <i class="fas fa-chevron-down"></i></h4>
+                    <h4 class="filter-title">Typ sprzętu <i class="fas fa-chevron-down"></i></h4>
                     <ul class="filter-options">
-                        <li class="filter-option" data-filter-group="bucket" data-filter-value="small"><span class="filter-checkbox"></span> < 2.0 m³</li>
-                        <li class="filter-option" data-filter-group="bucket" data-filter-value="medium"><span class="filter-checkbox"></span> 2.0 - 3.5 m³</li>
-                        <li class="filter-option" data-filter-group="bucket" data-filter-value="large"><span class="filter-checkbox"></span> > 3.5 m³</li>
+                        <li class="filter-option" data-filter-group="type" data-filter-value="teleskopowa"><span class="filter-checkbox"></span> Teleskopowa</li>
+                        <li class="filter-option" data-filter-group="type" data-filter-value="mini"><span class="filter-checkbox"></span> Mini-ładowarka</li>
                     </ul>
                 </div>
 
                 <div class="filter-group">
-                    <h4 class="filter-title">Producent <i class="fas fa-chevron-down"></i></h4>
+                    <h4 class="filter-title">Wysięg <i class="fas fa-chevron-down"></i></h4>
                     <ul class="filter-options">
-                        <li class="filter-option" data-filter-group="brand" data-filter-value="volvo"><span class="filter-checkbox"></span> Volvo</li>
-                        <li class="filter-option" data-filter-group="brand" data-filter-value="cat"><span class="filter-checkbox"></span> CAT</li>
-                        <li class="filter-option" data-filter-group="brand" data-filter-value="jcb"><span class="filter-checkbox"></span> JCB</li>
+                        <li class="filter-option" data-filter-group="reach" data-filter-value="short"><span class="filter-checkbox"></span> do 5 m</li>
+                        <li class="filter-option" data-filter-group="reach" data-filter-value="long"><span class="filter-checkbox"></span> &gt; 10 m</li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h4 class="filter-title">Udźwig <i class="fas fa-chevron-down"></i></h4>
+                    <ul class="filter-options">
+                        <li class="filter-option" data-filter-group="capacity" data-filter-value="light"><span class="filter-checkbox"></span> do 1.5 t</li>
+                        <li class="filter-option" data-filter-group="capacity" data-filter-value="heavy"><span class="filter-checkbox"></span> &gt; 3 t</li>
                     </ul>
                 </div>
 
@@ -107,9 +113,10 @@
                     <div class="sort-box">
                         <select class="sort-select" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 6px;">
                             <option value="default">Popularność</option>
-                            <option value="az">Nazwa A-Z</option>
-                            <option value="weight_asc">Masa rosnąco</option>
-                            <option value="weight_desc">Masa malejąco</option>
+                            <option value="reach_asc">Wysięg ↑</option>
+                            <option value="reach_desc">Wysięg ↓</option>
+                            <option value="capacity_asc">Udźwig ↑</option>
+                            <option value="capacity_desc">Udźwig ↓</option>
                         </select>
                     </div>
                 </div>
