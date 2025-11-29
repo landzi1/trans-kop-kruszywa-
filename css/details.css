@@ -355,10 +355,62 @@ table {
     font-size: clamp(26px, 4vw, 38px);
     font-weight: 700;
     color: var(--color-dark);
-    margin: 0;
+    margin: 0 0 20px 0;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
+}
+
+.content-area h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    margin: 30px 0 20px 0;
+    color: var(--color-dark);
+    text-transform: uppercase;
+}
+
+.content-area p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-gray-700);
+    margin-bottom: 20px;
+}
+
+/* CHECK LIST (Zalety) - FIXED for Desktop */
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.check-list li {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-gray-100);
+    padding: 15px 20px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.check-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background: #fff;
+    border: 1px solid var(--color-primary);
+}
+
+.check-list li i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .section-head h2::after {
@@ -909,6 +961,7 @@ table {
     /* Check list improvements */
     .check-list {
         gap: 10px;
+        grid-template-columns: 1fr;
     }
 
     .check-list li {
