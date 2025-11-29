@@ -24,6 +24,7 @@
 <!-- CSS -->
 <link href="css/home.css" rel="stylesheet">
 <link href="css/rental.css" rel="stylesheet">
+<link href="css/catalog.css" rel="stylesheet">
 <!-- Core -->
 <link href="css/wynajem.css" rel="stylesheet">
 <!-- Dedicated -->
@@ -90,104 +91,149 @@
 </section>
 <!-- ==================== FILTERS ==================== -->
 
-<!-- ==================== RENTAL CATEGORIES (Light & Modern) ==================== -->
-    <section class="rental-categories" id="kategorie">
-      <div class="container">
-        <div class="categories-grid">
+    <!-- CATALOG SECTION -->
+    <section class="catalog-section">
+        <div class="container catalog-layout">
+            
+            <!-- SIDEBAR (FILTERS) -->
+            <aside class="catalog-sidebar">
+                <a href="index.html" class="btn-back"><i class="fas fa-chevron-left"></i> Wróć do strony głównej</a>
 
-          <!-- Card 1: Koparki -->
-          <article class="category-card js-reveal-card js-clickable-card" data-href="maszyny/koparki.html">
-            <div class="category-bg">
-                <img src="assets/img-wynajem/koparki.webp" alt="Koparki" class="category-bg-img">
-                <span class="category-tag-overlay">Roboty Ziemne</span>
-            </div>
-            <div class="category-content">
-              <div>
-                  <h3>KOPARKI</h3>
-                  <p>Kołowe, gąsienicowe i mini-koparki.</p>
-                  <ul class="category-tags">
-                    <li>Gąsienicowe</li>
-                    <li>Kołowe</li>
-                    <li>Mini-koparki</li>
-                  </ul>
-              </div>
-              <a href="maszyny/koparki.html" class="btn js-card-link">Zobacz maszyny <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </article>
+                <div class="filter-group">
+                    <h4 class="filter-title">Typ Koparki <i class="fas fa-chevron-down"></i></h4>
+                    <ul class="filter-options">
+                        <li class="filter-option" data-filter-group="type" data-filter-value="gasienicowa"><span class="filter-checkbox"></span> Gąsienicowe</li>
+                        <li class="filter-option" data-filter-group="type" data-filter-value="kolowa"><span class="filter-checkbox"></span> Kołowe</li>
+                        <li class="filter-option" data-filter-group="type" data-filter-value="mini"><span class="filter-checkbox"></span> Mini</li>
+                    </ul>
+                </div>
 
-          <!-- Card 2: Ładowarki i sprzęt załadunkowy -->
-          <article class="category-card js-reveal-card js-clickable-card" data-href="maszyny/ladowarki.html" data-delay="100">
-            <div class="category-bg">
-                <img src="assets/img-wynajem/ładowarki.webp" alt="Ładowarki" class="category-bg-img">
-                <span class="category-tag-overlay">Załadunek</span>
-            </div>
-            <div class="category-content">
-              <div>
-                  <h3>ŁADOWARKI I SPRZĘT ZAŁADUNKOWY</h3>
-                  <p>Teleskopowe i mini-ładowarki z osprzętem.</p>
-                  <ul class="category-tags">
-                    <li>Teleskopowe</li>
-                    <li>Mini-ładowarki</li>
-                    <li>Z osprzętem</li>
-                  </ul>
-              </div>
-              <a href="maszyny/ladowarki.html" class="btn js-card-link">Zobacz maszyny <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </article>
+                <div class="filter-group">
+                    <h4 class="filter-title">Masa <i class="fas fa-chevron-down"></i></h4>
+                    <ul class="filter-options">
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="light"><span class="filter-checkbox"></span> &lt; 5 t</li>
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="medium"><span class="filter-checkbox"></span> 5–15 t</li>
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="medium-heavy"><span class="filter-checkbox"></span> 15–25 t</li>
+                        <li class="filter-option" data-filter-group="weight" data-filter-value="heavy"><span class="filter-checkbox"></span> &gt; 25 t</li>
+                    </ul>
+                </div>
 
-          <!-- Card 3: Sprzęt ciężki i specjalistyczny -->
-          <article class="category-card js-reveal-card js-clickable-card" data-href="maszyny/sprzet-ciezki.html" data-delay="200">
-             <div class="category-bg">
-                <img src="assets/img-wynajem/sprzet_ciezki.webp" alt="Sprzęt ciężki" class="category-bg-img">
-                <span class="category-tag-overlay">Specjalistyczny</span>
-            </div>
-            <div class="category-content">
-              <div>
-                  <h3>SPRZĘT CIĘŻKI I SPECJALISTYCZNY</h3>
-                  <p>Spycharka, przesiewacz i zamiatarka.</p>
-                  <ul class="category-tags">
-                    <li>Spycharka</li>
-                    <li>Przesiewacz</li>
-                    <li>Zamiatarka</li>
-                  </ul>
-              </div>
-              <a href="maszyny/sprzet-ciezki.html" class="btn js-card-link">Zobacz ofertę <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </article>
+                <div class="filter-group">
+                    <h4 class="filter-title">Producent <i class="fas fa-chevron-down"></i></h4>
+                    <ul class="filter-options">
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="komatsu"><span class="filter-checkbox"></span> Komatsu</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="liebherr"><span class="filter-checkbox"></span> Liebherr</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="volvo"><span class="filter-checkbox"></span> Volvo</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="cat"><span class="filter-checkbox"></span> CAT</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="hitachi"><span class="filter-checkbox"></span> Hitachi</li>
+                        <li class="filter-option" data-filter-group="brand" data-filter-value="bobcat"><span class="filter-checkbox"></span> Bobcat</li>
+                    </ul>
+                </div>
 
-          <!-- Card 4: Transport i logistyka -->
-          <article class="category-card js-reveal-card js-clickable-card" data-href="maszyny/transport.html" data-delay="300">
-             <div class="category-bg">
-                <img src="assets/img-wynajem/transport_osprzęt.webp" alt="Transport" class="category-bg-img">
-                <span class="category-tag-overlay">Logistyka</span>
-            </div>
-            <div class="category-content">
-              <div>
-                  <h3>TRANSPORT I LOGISTYKA</h3>
-                  <p>Wywrotki 4-osiowe, wanny oraz naczepa niskopodwoziowa.</p>
-                  <ul class="category-tags">
-                    <li>Wywrotki 4-osiowe</li>
-                    <li>Wanny</li>
-                    <li>Naczepa niskopodwoziowa</li>
-                  </ul>
-              </div>
-              <a href="maszyny/transport.html" class="btn js-card-link">Zobacz ofertę <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </article>
+                <div class="widget widget-contact" style="margin-top: 30px; border-radius: 8px;">
+                    <h4 class="widget-title" style="color: #000;">Potrzebujesz pomocy?</h4>
+                    <p style="color: #333;">Nie wiesz jaką maszynę wybrać? Zadzwoń do nas!</p>
+                    <a href="tel:+48123456789" class="phone-big" style="color: #000;">+48 123 456 789</a>
+                </div>
+            </aside>
+
+            <!-- MAIN GRID -->
+            <main class="catalog-main">
+                <div class="catalog-header" style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                    <p>Znaleziono maszyn: <strong>4</strong></p>
+                    <div class="sort-box">
+                        <select class="sort-select" style="background: #fff; color: #333; border: 1px solid #ddd; padding: 8px 15px; border-radius: 6px;">
+                            <option value="default">Popularność</option>
+                            <option value="weight_asc">Masa ↑</option>
+                            <option value="weight_desc">Masa ↓</option>
+                            <option value="depth_desc">Głębokość kopania</option>
+                            <option value="power_desc">Moc (KM)</option>
+                            <option value="brand_az">Producent A-Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="catalog-grid">
+                    
+                    <!-- KARTA 1: CAT 320 (Gąsienicowa) -->
+                    <article class="machine-card js-clickable-card" data-type="gasienicowa" data-weight="22500" data-brand="cat" data-name="CAT 320">
+                        <div class="machine-card__img-box">
+                            <span class="machine-card__tag">Top Wybór</span>
+                            <img src="assets/wynajem/koparka-gasienicowa.png" alt="Koparka gąsienicowa CAT 320" loading="lazy">
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">CAT 320</h3>
+                            <p class="machine-card__desc">Koparka gąsienicowa klasy 22t. Idealna do ciężkich robót ziemnych i wykopów szerokoprzestrzennych.</p>
+                            <div class="machine-card__specs">
+                                <span class="spec-item" title="Masa"><i class="fas fa-weight-hanging"></i> 22.5 t</span>
+                                <span class="spec-item" title="Głębokość kopania"><i class="fas fa-ruler-vertical"></i> 6.7 m</span>
+                                <span class="spec-item" title="Moc"><i class="fas fa-bolt"></i> 162 KM</span>
+                            </div>
+                            <a href="maszyny/koparka-cat-320.html" class="btn btn--primary btn--full btn--glow js-card-link">Szczegóły</a>
+                        </div>
+                    </article>
+
+                    <!-- KARTA 2: Volvo EW160 (Kołowa) -->
+                    <article class="machine-card js-clickable-card" data-type="kolowa" data-weight="17000" data-brand="volvo" data-name="Volvo EW160" data-delay="100">
+                        <div class="machine-card__img-box">
+                            <span class="machine-card__tag">Mobilna</span>
+                            <img src="assets/wynajem/koparka-kolowa.png" alt="Koparka kołowa Volvo EW160" loading="lazy">
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Volvo EW160</h3>
+                            <p class="machine-card__desc">Koparka kołowa 17t. Doskonała do prac miejskich, szybki dojazd po drogach publicznych.</p>
+                            <div class="machine-card__specs">
+                                <span class="spec-item" title="Masa"><i class="fas fa-weight-hanging"></i> 17.0 t</span>
+                                <span class="spec-item" title="Głębokość kopania"><i class="fas fa-ruler-vertical"></i> 5.7 m</span>
+                                <span class="spec-item" title="Prędkość"><i class="fas fa-tachometer-alt"></i> 35 km/h</span>
+                            </div>
+                            <a href="maszyny/koparka-volvo-ew160.html" class="btn btn--primary btn--full btn--glow js-card-link">Szczegóły</a>
+                        </div>
+                    </article>
+
+                    <!-- KARTA 3: Kubota KX019 (Minikoparka) -->
+                    <article class="machine-card js-clickable-card" data-type="mini" data-weight="1800" data-brand="kubota" data-name="Kubota KX019">
+                        <div class="machine-card__img-box">
+                            <span class="machine-card__tag">Precyzyjna</span>
+                            <img src="assets/wynajem/mini-koparka.png" alt="Minikoparka Kubota KX019" loading="lazy">
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Kubota KX019</h3>
+                            <p class="machine-card__desc">Minikoparka 1.8t. Niezastąpiona w ogrodach, przy przyłączach i w ciasnych przestrzeniach.</p>
+                            <div class="machine-card__specs">
+                                <span class="spec-item" title="Masa"><i class="fas fa-weight-hanging"></i> 1.8 t</span>
+                                <span class="spec-item" title="Głębokość"><i class="fas fa-ruler-vertical"></i> 2.5 m</span>
+                                <span class="spec-item" title="Szerokość"><i class="fas fa-arrows-alt-h"></i> 99 cm</span>
+                            </div>
+                            <a href="maszyny/minikoparka-kubota-kx019.html" class="btn btn--primary btn--full btn--glow js-card-link">Szczegóły</a>
+                        </div>
+                    </article>
+
+                    <!-- KARTA 4: JCB 3CX (Koparko-ładowarka) -->
+                    <article class="machine-card js-clickable-card" data-type="kolowa" data-weight="8100" data-brand="jcb" data-name="JCB 3CX">
+                        <div class="machine-card__img-box">
+                            <span class="machine-card__tag">Uniwersalna</span>
+                            <!-- Using koparka-kolowa.png as a visual proxy for wheeled excavator/loader if specific img missing -->
+                            <img src="assets/wynajem/koparka-kolowa.png" alt="Koparko-ładowarka JCB 3CX" loading="lazy"> 
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">JCB 3CX</h3>
+                            <p class="machine-card__desc">Koparko-ładowarka. Najbardziej uniwersalna maszyna na budowie. Ładowanie i kopanie.</p>
+                            <div class="machine-card__specs">
+                                <span class="spec-item" title="Masa"><i class="fas fa-weight-hanging"></i> 8.1 t</span>
+                                <span class="spec-item" title="Łyżka"><i class="fas fa-cube"></i> 1.0 m³</span>
+                                <span class="spec-item" title="Napęd"><i class="fas fa-truck-monster"></i> 4x4</span>
+                            </div>
+                            <a href="maszyny/koparko-ladowarka-jcb-3cx.html" class="btn btn--primary btn--full btn--glow js-card-link">Szczegóły</a>
+                        </div>
+                    </article>
+
+                </div>
+            </main>
 
         </div>
-      </div>
     </section>
-<!-- ==================== RENTAL CTA ==================== -->
-<section class="rental-cta">
-<div class="container">
-<div class="rental-cta__inner">
-<h2>Potrzebujesz sprzętu na swoją realizację?</h2>
-<p>Napisz do nas, a dobierzemy odpowiednią maszynę i warunki wynajmu.</p>
-<a class="btn btn--secondary btn--lg" href="kontakt.html#wycena">Skontaktuj się z nami</a>
-</div>
-</div>
-</section>
+
 <!-- ==================== RENTAL STEPS ==================== -->
 <section class="rental-rules reveal">
 <div class="container">
@@ -319,5 +365,6 @@
 </button>
 <!-- JavaScript -->
 <script src="js/home.js"></script>
+<script type="module" src="assets/js/catalog.js"></script>
 </body>
 </html>
