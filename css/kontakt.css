@@ -6,12 +6,12 @@
 /* Page Hero reuse */
 .page-hero {
   position: relative;
-  height: 45vh; /* Slightly shorter for contact */
-  min-height: 350px;
+  min-height: 50vh; /* Increased height for better spacing */
   display: flex;
   align-items: center;
   overflow: hidden;
   margin-top: 0;
+  padding-bottom: 60px; /* Prevent content overlap on zoom */
 }
 .page-hero__background {
   position: absolute;

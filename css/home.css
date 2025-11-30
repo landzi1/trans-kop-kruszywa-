@@ -2412,3 +2412,154 @@ h6 {
     margin: 0 10px;
   }
 }
+
+/* ============================================================
+   FOOTER RESPONSIVE FIXES (Mobile Optimization)
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on tablets */
+        gap: 40px !important;
+        text-align: left !important; /* Reset center alignment */
+    }
+    
+    .footer__brand {
+        grid-column: 1 / -1 !important; /* Brand full width on tablet */
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .footer__about {
+        margin: 0 auto 20px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 40px 0 20px !important; /* Reduce padding */
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr !important; /* 1 column on phone */
+        gap: 30px !important;
+    }
+
+    .footer__brand {
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+    
+    .footer__heading {
+        margin-bottom: 15px !important;
+        font-size: 1rem !important;
+    }
+
+    /* CONTACT SECTION FIX */
+    .footer__contact-item {
+        display: grid !important;
+        grid-template-columns: 24px 1fr !important; /* Fixed icon width | Fluid text */
+        gap: 12px !important;
+        align-items: start !important;
+        text-align: left !important;
+        margin-bottom: 15px !important;
+    }
+
+    .footer__contact-item i {
+        margin-top: 3px !important; /* Align with first line of text */
+        width: 20px !important;
+        text-align: center !important;
+        color: var(--color-primary) !important;
+    }
+
+    .footer__contact-item div {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .footer__contact-item strong {
+        margin-bottom: 2px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .footer__contact-item span, 
+    .footer__contact-item a {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Compact Links */
+    .footer__links a {
+        padding: 5px 0 !important;
+        margin-bottom: 5px !important;
+    }
+}
+
+/* ============================================================
+   FLEET SECTION RESPONSIVE FIXES (Mobile Scrolling)
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .fleet-slider__wrapper {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        padding-bottom: 20px; /* Add space for scrollbar */
+        margin-bottom: -20px; /* Compensate for scrollbar space */
+        box-sizing: content-box; /* Ensure padding doesn't affect width calculation */
+    }
+
+    .fleet-slider__track {
+        flex-wrap: nowrap; /* Prevent items from wrapping to new line */
+    }
+
+    .fleet-card {
+        flex-shrink: 0; /* Ensure cards do not shrink below min-width */
+        margin-right: 20px; /* Adjust spacing */
+        min-width: 300px; /* Slightly smaller min-width for mobile cards */
+    }
+
+    .fleet-slider__controls {
+        display: none; /* Hide controls if using native scroll, or re-enable JS controls specific for touch */
+    }
+}
+
+@media (max-width: 576px) {
+    .fleet-card {
+        min-width: 280px; /* Even smaller min-width for very small screens */
+    }
+}
+
+/* ============================================================
+   FLEET SECTION - BUTTON NAV RESTORED (Mobile)
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .fleet-slider__wrapper {
+        overflow: hidden !important; /* JS Control requires hidden overflow */
+        -webkit-overflow-scrolling: auto !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .fleet-slider__track {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .fleet-card {
+        flex-shrink: 0 !important;
+        width: 100% !important; /* One card per view on mobile */
+        max-width: 100% !important;
+        min-width: 0 !important; /* Reset desktop min-width */
+        margin-right: 16px !important; /* Match JS Gap */
+    }
+
+    .fleet-slider__controls {
+        display: flex !important; /* Show buttons */
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+}
