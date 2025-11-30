@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloaderHTML = `
         <div id="app-preloader">
             <div class="preloader-content">
-                <img src="assets/icons/logo-transparent.png" alt="Trans-Kop Logo" class="preloader-logo">
+                <img src="/assets/icons/logo-transparent.png" alt="Trans-Kop Logo" class="preloader-logo">
                 <div class="loader-bar-container">
                     <div class="loader-bar"></div>
                 </div>

@@ -94,11 +94,11 @@
     const reveals = $$(".reveal, .js-reveal-card"); // Updated selector
     if (!reveals.length) return;
 
-    const isKruszywa = window.location.pathname.includes("kruszywa.html");
+    const isEarlyTriggerPage = window.location.pathname.includes("kruszywa.html") || window.location.pathname.includes("blog.html");
 
     const revealOptions = {
       root: null,
-      rootMargin: isKruszywa ? "0px 0px -20px 0px" : "0px 0px -80px 0px", // Earlier trigger for Kruszywa
+      rootMargin: isEarlyTriggerPage ? "0px 0px -20px 0px" : "0px 0px -80px 0px", // Earlier trigger for specific pages
       threshold: 0.15, // Slightly higher threshold
     };
 

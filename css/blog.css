@@ -296,6 +296,20 @@
   height: 100%;
   overflow: hidden;
   clip-path: var(--clip-card);
+  /* Only apply short transitions to non-transform properties initially, 
+     or allow reveal to take precedence via cascade order/specificity */
+  transition: box-shadow var(--duration-fast) var(--ease-tech),
+    border-color var(--duration-fast) var(--ease-tech);
+}
+
+/* Allow reveal animation to control transform/opacity */
+.blog-card.reveal {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Restore fast transform transition ONLY after reveal is done (optional) 
+   or just ensure hover uses the fast transition */
+.blog-card:hover {
   transition: transform var(--duration-fast) var(--ease-tech),
     box-shadow var(--duration-fast) var(--ease-tech),
     border-color var(--duration-fast) var(--ease-tech);
