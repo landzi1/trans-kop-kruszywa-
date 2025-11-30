@@ -94,9 +94,11 @@
     const reveals = $$(".reveal, .js-reveal-card"); // Updated selector
     if (!reveals.length) return;
 
+    const isKruszywa = window.location.pathname.includes("kruszywa.html");
+
     const revealOptions = {
       root: null,
-      rootMargin: "0px 0px 200px 0px", // Trigger earlier: 200px before reaching viewport bottom
+      rootMargin: isKruszywa ? "0px 0px -20px 0px" : "0px 0px -80px 0px", // Earlier trigger for Kruszywa
       threshold: 0.15, // Slightly higher threshold
     };
 
