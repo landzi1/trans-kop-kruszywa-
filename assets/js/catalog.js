@@ -113,8 +113,8 @@ function init() {
     widget.style.marginTop = '30px';
     widget.innerHTML = `
         <h4 class="widget-title" style="color: #000;">Potrzebujesz pomocy?</h4>
-        <p style="color: #333;">Nie wiesz jaką maszynę wybrać? Zadzwoń do nas!</p>
-        <a href="tel:+48123456789" class="phone-big" style="color: #000;">+48 123 456 789</a>
+        <p class="contact-hint">Nie wiesz jaką maszynę wybrać? Zadzwoń do nas!</p>
+        <a href="tel:+48789426796" class="phone-big" style="color: #000;">+48 789 426 796</a>
     `;
     els.sidebar.appendChild(widget);
 
