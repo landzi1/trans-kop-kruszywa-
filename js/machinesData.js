@@ -242,6 +242,26 @@ export const machines = [
     image: 'assets/wynajem/mini-koparka.png'
   },
 
+  // --- Koparko-ładowarki ---
+  {
+    id: 'jcb-3cx',
+    name: 'JCB 3CX',
+    category: 'koparki',
+    type: 'kolowa',
+    brand: 'jcb',
+    weight: 8100,
+    specs: {
+      "Masa robocza": "8.1 t",
+      "Pojemność łyżki": "1.0 m³",
+      "Napęd": "4x4",
+      "Uniwersalność": "Kopanie i ładowanie"
+    },
+    description: "Koparko-ładowarka JCB 3CX to najbardziej uniwersalna maszyna na budowie. Łączy funkcje koparki i ładowarki czołowej, dzięki czemu może wykonywać zarówno prace ziemne, jak i ładowanie materiałów.",
+    features: ["Uniwersalne zastosowanie", "Kopanie i ładowanie", "Napęd 4x4", "Zwrotność i mobilność"],
+    attachments: "Standardowo wyposażona w łyżkę ładowarkową z przodu oraz ramię koparki z tyłu. Idealna do prac przyłączeniowych, wykopów i załadunku materiałów sypkich.",
+    image: 'assets/wynajem/koparka-kolowa.png'
+  },
+
   // ==================== KATEGORIA: INNE ====================
   {
     id: 'spycharka-cat-d6',

@@ -1,0 +1,114 @@
+/* ============================================================
+   PRELOADER STYLES - PROFESSIONAL DARK THEME
+   ============================================================ */
+
+#app-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Glassmorphism Effect */
+    background-color: rgba(17, 17, 17, 0.75);
+    backdrop-filter: blur(8px); /* Zmniejszony blur */
+    -webkit-backdrop-filter: blur(8px); /* Wsparcie dla Safari */
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease, backdrop-filter 0.8s ease;
+}
+
+/* Ukrywanie preloadera */
+#app-preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Kontener logo */
+.preloader-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.preloader-logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 40px;
+    filter: drop-shadow(0 0 20px rgba(245, 196, 0, 0.2));
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+/* Animacja Logo - Delikatne oddychanie */
+@keyframes logoPulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 20px rgba(245, 196, 0, 0.2));
+    }
+    50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 35px rgba(245, 196, 0, 0.5));
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 20px rgba(245, 196, 0, 0.2));
+    }
+}
+
+/* Pasek postępu - Geometryczny i Złoty */
+.loader-bar-container {
+    width: 240px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    /* Geometryczne krawędzie (Bierse style) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.loader-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #F5C400; /* Brand Gold */
+    transform: translateX(-100%);
+    animation: loadingProgress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    box-shadow: 0 0 15px rgba(245, 196, 0, 0.8);
+}
+
+@keyframes loadingProgress {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Tekst ładowania (opcjonalny) */
+.loader-text {
+    margin-top: 15px;
+    color: #F5C400;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    animation: textFade 2s ease-in-out infinite;
+}
+
+@keyframes textFade {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
