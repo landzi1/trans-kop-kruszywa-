@@ -96,7 +96,7 @@
 
     const revealOptions = {
       root: null,
-      rootMargin: "0px 0px -80px 0px", // Trigger earlier for smoother effect
+      rootMargin: "0px 0px 200px 0px", // Trigger earlier: 200px before reaching viewport bottom
       threshold: 0.15, // Slightly higher threshold
     };
 
@@ -107,6 +107,15 @@
           setTimeout(() => {
             entry.target.classList.add("active"); // Support old class
             entry.target.classList.add("is-revealed"); // Support new class
+
+            // OPTIMIZATION: Remove .reveal class after animation to prevent conflicts
+            // with internal animations (like sliders) and reduce repaint cost.
+            setTimeout(() => {
+              entry.target.classList.remove("reveal");
+              entry.target.classList.remove("active");
+              entry.target.classList.remove("is-revealed");
+            }, 1500); // Wait safely longer than transition
+
           }, parseInt(delay));
           observer.unobserve(entry.target);
         }
@@ -304,8 +313,13 @@
       updateSlider();
     };
 
+    let isAnimating = false;
+
     // Navigation with infinite loop
     const goNext = () => {
+      if (isAnimating) return;
+      isAnimating = true;
+
       if (currentIndex < cards.length - cardsToShow) {
         currentIndex++;
       } else {
@@ -313,9 +327,13 @@
         currentIndex = 0;
       }
       updateSlider();
+      setTimeout(() => { isAnimating = false; }, 500);
     };
 
     const goPrev = () => {
+      if (isAnimating) return;
+      isAnimating = true;
+
       if (currentIndex > 0) {
         currentIndex--;
       } else {
@@ -323,6 +341,7 @@
         currentIndex = cards.length - cardsToShow;
       }
       updateSlider();
+      setTimeout(() => { isAnimating = false; }, 500);
     };
 
     // Event listeners
