@@ -78,6 +78,9 @@ const els = {
 function init() {
     if (!els.sidebar || !els.grid) return;
 
+    // Fix: Prevent layout collapse on filtering
+    els.grid.style.minHeight = '400px';
+
     const backBtn = document.querySelector('.btn-back');
     if (backBtn) backBtn.remove();
 
@@ -319,7 +322,8 @@ function renderBrandSearch(container) {
 
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === 'Tab') {
-            e.preventDefault(); // Stop form submit or focus change
+            e.preventDefault();
+            e.stopPropagation(); // Fix: Prevent bubbling which might cause page jump/submit
             
             const val = input.value.toLowerCase();
             if (!val) return;
