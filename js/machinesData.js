@@ -16,7 +16,7 @@ export const machines = [
     description: "Solidna wywrotka 4-osiowa marki MAN, idealna do transportu ciężkich kruszyw i ziemi. Doskonale sprawdza się w trudnym terenie dzięki napędowi 8x4.",
     features: ["Wysoka ładowność", "Napęd na dwie tylne osie", "Wytrzymała zabudowa", "Niska emisja spalin Euro 6"],
     attachments: "Możliwość wynajmu z doświadczonym kierowcą. Samochód wyposażony w system GPS. Dostępny do pracy ciągłej przy dużych inwestycjach drogowych.",
-    image: 'assets/img-wynajem/transport_osprzęt.webp'
+    image: 'assets/img-maszyny/wywrotka 4-osiowa MAN TGS 8x4.webp'
   },
   {
     id: 'scania-p410-8x4',
@@ -34,7 +34,7 @@ export const machines = [
     description: "Scania P410 to synonim niezawodności i ekonomii. Wywrotka przeznaczona do intensywnej pracy przy wywozie urobku i dostawach materiałów sypkich.",
     features: ["Ekonomiczny silnik", "Komfortowa kabina", "Wysoki prześwit", "System optymalizacji trakcji"],
     attachments: "Pojazd posiada wzmocnioną zabudowę typu Square, idealną do przewozu głazów i gruzu. Możliwość pracy w systemie zmianowym.",
-    image: 'assets/img-wynajem/transport_osprzęt.webp'
+    image: 'assets/img-maszyny/Wywrotka Scania P410 8x4.webp'
   },
   {
     id: 'mercedes-arocs-8x4',
@@ -52,7 +52,7 @@ export const machines = [
     description: "Specjalista od zadań budowlanych. Mercedes Arocs oferuje potężną moc i wytrzymałość ramy, niezbędną przy transporcie gruzu i ciężkich materiałów.",
     features: ["Wzmocnione zawieszenie", "Duża moc silnika", "Odporność na przeciążenia", "Precyzyjna skrzynia biegów"],
     attachments: "Samochód przystosowany do najcięższych warunków terenowych. Idealny do obsługi kopalni kruszyw i dużych placów budowy.",
-    image: 'assets/img-wynajem/transport_osprzęt.webp'
+    image: 'assets/img-maszyny/Mercedes Arocs 8x4.webp'
   },
   {
     id: 'renault-kerax-wanna',
@@ -70,7 +70,7 @@ export const machines = [
     description: "Zestaw typu 'wanna' dedykowany do transportu dużych ilości kruszyw drogowych i piasku. Idealny do obsługi dużych inwestycji infrastrukturalnych.",
     features: ["Maksymalna ładowność", "Szybki wyładunek", "Szczelna zabudowa", "Stabilność w terenie"],
     attachments: "Zestaw ciągnik + naczepa samowyładowcza (stalowa lub aluminiowa). Przeznaczony do transportu sypkiego: piasek, żwir, tłuczeń, masa bitumiczna.",
-    image: 'assets/img-wynajem/transport_osprzęt.webp'
+    image: 'assets/img-maszyny/Renault Kerax typu _wanna_.webp'
   },
   {
     id: 'zestaw-niskopodwoziowy',
@@ -88,7 +88,7 @@ export const machines = [
     description: "Specjalistyczna naczepa niskopodwoziowa do relokacji maszyn budowlanych. Gwarantujemy bezpieczny transport koparek, ładowarek i walców.",
     features: ["Hydrauliczne najazdy", "Niski kąt najazdu", "Możliwość poszerzenia", "Transport ponadgabarytowy"],
     attachments: "Usługa obejmuje załadunek, transport i rozładunek maszyn, kontenerów oraz konstrukcji stalowych. Posiadamy niezbędne zezwolenia na przejazdy nienormatywne.",
-    image: 'assets/img-wynajem/transport_osprzęt.webp'
+    image: 'assets/img-maszyny/Specjalistyczna naczepa niskopodwoziowa do relokacji maszyn budowlanych.webp'
   },
 
   // ==================== KATEGORIA: KOPARKI ====================
@@ -109,7 +109,7 @@ export const machines = [
     description: "Kompaktowa koparka kołowa Komatsu, idealna do prac w terenie zurbanizowanym. Szybka, zwrotna i precyzyjna.",
     features: ["Kompaktowe wymiary", "Wysoka mobilność", "Ramię łamane", "Szybkozłącze hydrauliczne"],
     attachments: "W zestawie komplet łyżek (30, 60, 90 cm) oraz skarpówka hydrauliczna. Opcjonalnie: młot hydrauliczny, chwytak do krawężników.",
-    image: 'assets/wynajem/koparka-kolowa.png'
+    image: 'assets/img-maszyny/Komatsu PW 140-8.webp'
   },
   {
     id: 'liebherr-316',
@@ -127,7 +127,7 @@ export const machines = [
     description: "Uniwersalna maszyna do robót ziemnych i drogowych. Liebherr 316 łączy dużą siłę kopania z mobilnością podwozia kołowego.",
     features: ["Duża stabilność", "Precyzyjne sterowanie", "Łyżka skarpowa w zestawie", "Niskie zużycie paliwa"],
     attachments: "Standardowo wyposażona w szybkozłącze mechaniczne i łyżkę skarpową. Idealna do korytowania pod drogi i chodniki.",
-    image: 'assets/wynajem/koparka-kolowa.png'
+    image: 'assets/img-maszyny/Liebherr 316.webp'
   },
   {
     id: 'liebherr-900c',
@@ -145,7 +145,7 @@ export const machines = [
     description: "Cięższa koparka kołowa do wymagających zadań. Doskonale radzi sobie przy wykopach pod instalacje sanitarne i drogowe.",
     features: ["Wysoka wydajność hydrauliki", "Zwiększony zasięg", "Mocny silnik Deutz", "Komfort operatora"],
     attachments: "Dostępne łyżki do kopania (40-120cm) oraz hydrauliczna łyżka skarpowa. Maszyna posiada wyjścia hydrauliczne pod młot i wiertnicę.",
-    image: 'assets/wynajem/koparka-kolowa.png'
+    image: 'assets/img-maszyny/Liebherr 900C.webp'
   },
   {
     id: 'volvo-ew-160c',
@@ -163,7 +163,7 @@ export const machines = [
     description: "Volvo EW160C to lider w klasie 17 ton. Maszyna oferuje płynną pracę hydrauliki i doskonałą widoczność, co zwiększa bezpieczeństwo na budowie.",
     features: ["Płynna hydraulika", "Kabina Volvo Care Cab", "Rototilt (opcja)", "Wysoka siła odspajania"],
     attachments: "Maszyna może być wyposażona w głowicę obrotową (rototilt), co znacznie zwiększa precyzję prac wykończeniowych i skarpowania.",
-    image: 'assets/wynajem/koparka-kolowa.png'
+    image: 'assets/img-maszyny/VOLVO EW 160C.webp'
   },
 
   // --- Gąsienicowe ---
@@ -183,7 +183,7 @@ export const machines = [
     description: "Lekka koparka gąsienicowa, idealna na podmokłe tereny i mniejsze place budowy. Zapewnia niski nacisk na grunt.",
     features: ["Niski nacisk na grunt", "Zwrotność", "Ekonomiczny silnik", "Idealna do melioracji"],
     attachments: "Dedykowana do prac na terenach podmokłych (szerokie gąsienice). Możliwość montażu łyżki ażurowej do czyszczenia rowów.",
-    image: 'assets/wynajem/koparka-gasienicowa.png'
+    image: 'assets/img-maszyny/Komatsu PC 130.webp'
   },
   {
     id: 'cat-318-c',
@@ -201,7 +201,7 @@ export const machines = [
     description: "Klasyka gatunku. CAT 318 C to wytrzymała maszyna o masie 20 ton, stworzona do ciągłej pracy przy wykopach szerokoprzestrzennych.",
     features: ["Legendarna trwałość CAT", "Duża siła łyżki", "Szerokie gąsienice", "Wysoka wydajność załadunku"],
     attachments: "Maszyna idealna do wykopów pod fundamenty, sieci wod-kan oraz prac drogowych. Dostępne łyżki: 60cm, 100cm, 120cm oraz skarpowa hydrauliczna.",
-    image: 'assets/wynajem/koparka-gasienicowa.png'
+    image: 'assets/img-maszyny/CAT 318 C.webp'
   },
   {
     id: 'hitachi-350-lc',
@@ -219,7 +219,7 @@ export const machines = [
     description: "Najcięższa maszyna w naszej flocie. 35-tonowy kolos do zadań specjalnych, głębokich wykopów i wyburzeń przemysłowych.",
     features: ["Ogromna wydajność", "Wzmocnione ramię", "Łyżka skalna", "Stabilność przy dużych obciążeniach"],
     attachments: "Przystosowana do najcięższych prac ziemnych. Opcjonalnie wyposażona w osprzęt wyburzeniowy: nożyce do betonu lub młot 2.5t.",
-    image: 'assets/wynajem/koparka-gasienicowa.png'
+    image: 'assets/img-maszyny/Hitachi 350 LC.webp'
   },
 
   // --- Mini ---
@@ -239,7 +239,7 @@ export const machines = [
     description: "Wszechstronna minikoparka Bobcat. Niezastąpiona przy przyłączach, pracach ogrodowych i w ciasnych przestrzeniach miejskich.",
     features: ["Rozsuwane gąsienice", "Transport na lawecie", "Duża siła kopania jak na tę klasę", "Precyzyjny joystick"],
     attachments: "Komplet łyżek: 30cm, 50cm, skarpówka. Możliwość podpięcia wiertnicy gruntowej (np. pod słupki ogrodzeniowe).",
-    image: 'assets/wynajem/mini-koparka.png'
+    image: 'assets/img-maszyny/BOBCAT Minikoparka.webp'
   },
 
   // --- Koparko-ładowarki ---
@@ -259,7 +259,7 @@ export const machines = [
     description: "Koparko-ładowarka JCB 3CX to najbardziej uniwersalna maszyna na budowie. Łączy funkcje koparki i ładowarki czołowej, dzięki czemu może wykonywać zarówno prace ziemne, jak i ładowanie materiałów.",
     features: ["Uniwersalne zastosowanie", "Kopanie i ładowanie", "Napęd 4x4", "Zwrotność i mobilność"],
     attachments: "Standardowo wyposażona w łyżkę ładowarkową z przodu oraz ramię koparki z tyłu. Idealna do prac przyłączeniowych, wykopów i załadunku materiałów sypkich.",
-    image: 'assets/wynajem/koparka-kolowa.png'
+    image: 'assets/img-maszyny/JCB 3CX.webp'
   },
 
   // ==================== KATEGORIA: INNE ====================
@@ -279,7 +279,7 @@ export const machines = [
     description: "Profesjonalna spycharka gąsienicowa CAT D6. Idealna do niwelacji terenu, zdejmowania humusu i hałdowania materiału.",
     features: ["Wysoka wydajność pchania", "System niwelacji", "Zrywak tylny", "Doskonała przyczepność"],
     attachments: "Maszyna wyposażona w lemiesz typu SU do uniwersalnych prac ziemnych oraz zrywak tylny wielozębowy do spulchniania twardego gruntu.",
-    image: 'assets/img-wynajem/sprzet_ciezki.webp'
+    image: 'assets/img-maszyny/Spycharka CAT D6.webp'
   },
   {
     id: 'przesiewacz-mobilny',
@@ -297,7 +297,7 @@ export const machines = [
     description: "Mobilny zakład przesiewania. Pozwala na odzysk materiału na budowie, przesiewanie ziemi, gruzu i kruszyw na żądane frakcje.",
     features: ["Wysoka mobilność", "Szybki czas rozkładania", "Regulowane frakcje", "Własne zasilanie"],
     attachments: "Możliwość konfiguracji sit pod konkretne zamówienie (np. ziemia ogrodowa, tłuczeń, piasek).",
-    image: 'assets/img-wynajem/sprzet_ciezki.webp'
+    image: 'assets/img-maszyny/przesiewacz mobilny.webp'
   },
   {
     id: 'zamiatarka-iveco',
@@ -315,7 +315,7 @@ export const machines = [
     description: "Zamiatarka uliczna na podwoziu ciężarowym. Niezbędna do utrzymania czystości dróg dojazdowych na placu budowy i ulic publicznych.",
     features: ["System zraszania", "Szczotki talerzowe", "Myjka ciśnieniowa ręczna", "Wydajny system ssący"],
     attachments: "Pojazd w pełni autonomiczny. Posiada własny zbiornik na wodę oraz lance do ręcznego mycia znaków lub trudno dostępnych miejsc.",
-    image: 'assets/img-wynajem/sprzet_ciezki.webp'
+    image: 'assets/img-maszyny/Zamiatarka IVECO.webp'
   },
 
   // ==================== KATEGORIA: ŁADOWARKI ====================
@@ -335,7 +335,7 @@ export const machines = [
     description: "Ładowarka teleskopowa o imponującym zasięgu 17 metrów. Niezastąpiona przy budowie hal, podawaniu materiałów na stropy i konstrukcje.",
     features: ["Duży zasięg", "Stabilizatory hydrauliczne", "Sterowanie krab", "Widły do palet"],
     attachments: "W zestawie: widły do palet, łyżka ładowarkowa. Opcjonalnie: kosz osobowy (zwyżka), zawiesie hakowe.",
-    image: 'assets/img-wynajem/ładowarki.webp'
+    image: 'assets/img-maszyny/Ładowarka JCB 540-170.webp'
   },
   {
     id: 'bobcat-miniladowarka-873',
@@ -353,6 +353,6 @@ export const machines = [
     description: "Mocna miniładowarka burtowa Bobcat 873. Kompaktowe wymiary pozwalają na pracę wewnątrz budynków, a duża moc na obsługę ciężkiego osprzętu.",
     features: ["Zwrotność w miejscu", "Wysoka hydraulika (High Flow)", "Szybka wymiana osprzętu", "Odporna konstrukcja"],
     attachments: "Szeroka gama osprzętu: widły, łyżka, zamiatarka, młot, wiertnica. Idealna do prac porządkowych i wykończeniowych.",
-    image: 'assets/img-wynajem/ładowarki.webp'
+    image: 'assets/img-maszyny/BOBCAT 873.webp'
   }
 ];
