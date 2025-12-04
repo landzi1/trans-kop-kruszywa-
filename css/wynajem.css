@@ -6,12 +6,12 @@
 /* ==================== PAGE HERO (Common) ==================== */
 .page-hero {
   position: relative;
-  height: 50vh;
-  min-height: 400px;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   margin-top: 0;
+  padding-bottom: 60px; /* Added for consistency with kontakt.html */
 }
 
 .page-hero__background {
