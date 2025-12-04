@@ -427,9 +427,15 @@
   max-width: 90vw;
   max-height: 90vh;
   position: relative;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lightbox__content img {
+  width: auto;
+  height: auto;
   max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
