@@ -125,7 +125,7 @@ function init() {
     if (els.sortSelect) {
         els.sortSelect.addEventListener('change', (e) => {
             state.sortBy = e.target.value;
-            renderGrid();
+            renderGrid(true);
         });
     }
 
@@ -187,7 +187,7 @@ function renderCategories() {
             state.currentCategory = 'all';
             state.activeTypes = [];
             renderCategories();
-            updateView();
+            updateView(true);
         }
     });
     els.catListContainer.appendChild(allLi);
@@ -200,7 +200,7 @@ function renderCategories() {
                 state.currentCategory = catKey;
                 state.activeTypes = [];
                 renderCategories();
-                updateView();
+                updateView(true);
             }
         });
         els.catListContainer.appendChild(li);
@@ -218,7 +218,7 @@ function renderStaticCheckboxes(container, dataObj, stateKey) {
             e.preventDefault();
             toggleFilter(stateKey, key);
             renderStaticCheckboxes(container, dataObj, stateKey); 
-            renderGrid();
+            renderGrid(true);
         });
         container.appendChild(li);
     });
@@ -261,7 +261,7 @@ function renderBrandSearch(container) {
             tag.addEventListener('click', () => {
                 toggleFilter('activeBrands', tag.dataset.brand);
                 renderTags();
-                renderGrid();
+                renderGrid(true);
             });
         });
     };
@@ -286,33 +286,6 @@ function renderBrandSearch(container) {
         );
 
         if (match) {
-            // Match casing of the brand data (e.g. 'Cat' or 'Volvo')
-            // Ghost shows full name, but we want to overlay it carefully
-            // Actually, standard ghost text repeats user input? No, standard is completion.
-            // Ghost: [User Input] + [Rest of Match]
-            
-            // To visually align, we just put the full match in ghost
-            // But ensure the first part matches casing? 
-            // Simpler: Ghost text contains the FULL match name with correct casing.
-            // Since input is transparent background, we rely on user typing to cover ghost?
-            // No, input is on TOP (z-index 2). Ghost is BEHIND.
-            // So ghost must be: Match Name.
-            // User types "bo", ghost has "Bobcat". User sees "bo" (black) on top of "Bo" (grey).
-            // This looks messy if casing differs.
-            
-            // Better UX: Ghost only shows the SUFFIX?
-            // Input: "bo" | Ghost: "  bcat"
-            // Hard to align with variable fonts.
-            
-            // BEST UX FOR "HIGHLIGHT":
-            // Input value is what user typed.
-            // Ghost text is the FULL MATCH.
-            // But we need to make sure the user text covers the ghost text perfectly.
-            // Assuming monospaced? No. Manrope.
-            
-            // Workaround: Ghost text is only visible if we handle it carefully.
-            // Let's stick to the prompt: "dokończy".
-            // Let's try simply setting ghost text to the Match.
             const label = match.charAt(0).toUpperCase() + match.slice(1);
             ghost.textContent = label;
         } else {
@@ -335,7 +308,7 @@ function renderBrandSearch(container) {
                 if (!state.activeBrands.includes(match)) {
                     state.activeBrands.push(match);
                     renderTags();
-                    renderGrid();
+                    renderGrid(true);
                 }
                 // Clear input
                 input.value = '';
@@ -351,7 +324,7 @@ function renderBrandSearch(container) {
             if (input.value === '' && state.activeBrands.length > 0) {
                 state.activeBrands.pop();
                 renderTags();
-                renderGrid();
+                renderGrid(true);
             }
         }
     });
@@ -392,9 +365,9 @@ function toggleFilter(arrayName, value) {
 /**
  * VIEW UPDATES
  */
-function updateView() {
+function updateView(shouldScroll = false) {
     renderTypeFilters();
-    renderGrid();
+    renderGrid(shouldScroll);
 }
 
 function renderTypeFilters() {
@@ -413,7 +386,7 @@ function renderTypeFilters() {
             e.preventDefault();
             toggleFilter('activeTypes', typeKey);
             renderTypeFilters();
-            renderGrid();
+            renderGrid(true);
         });
         els.typeListContainer.appendChild(li);
     });
@@ -422,7 +395,7 @@ function renderTypeFilters() {
 /**
  * GRID RENDER
  */
-function renderGrid() {
+function renderGrid(shouldScroll = false) {
     let filtered = machines.filter(m => {
         if (state.currentCategory !== 'all' && m.category !== state.currentCategory) return false;
         if (state.activeTypes.length > 0 && !state.activeTypes.includes(m.type)) return false;
@@ -465,22 +438,42 @@ function renderGrid() {
 
     if (filtered.length === 0) {
         els.grid.innerHTML = '<div style="grid-column: 1/-1; padding: 40px; text-align: center; color: #777;">Brak maszyn spełniających kryteria.</div>';
-        return;
+    } else {
+        els.grid.innerHTML = filtered.map(m => createCardHTML(m)).join('');
     }
 
-    els.grid.innerHTML = filtered.map(m => createCardHTML(m)).join('');
-    
-    document.querySelectorAll('.machine-card.js-reveal-card').forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add('is-revealed');
-        }, index * 100);
+    // SCROLL FIX: Reset view to top of results if needed
+    if (shouldScroll) {
+        const catalogLayout = document.querySelector('.catalog-layout');
+        if (catalogLayout) {
+            // Use a small timeout to allow browser to clamp scroll first, 
+            // then we correct it.
+            setTimeout(() => {
+                const headerOffset = 120; 
+                const elementPosition = catalogLayout.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 50);
+        }
+    }
 
-        card.addEventListener('click', (e) => {
-            if (e.target.closest('a') || e.target.closest('button')) return;
-            const mainLink = card.querySelector('a');
-            if (mainLink) mainLink.click();
+    if (filtered.length > 0) {
+        document.querySelectorAll('.machine-card.js-reveal-card').forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('is-revealed');
+            }, index * 100);
+
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('a') || e.target.closest('button')) return;
+                const mainLink = card.querySelector('a');
+                if (mainLink) mainLink.click();
+            });
         });
-    });
+    }
 }
 
 function createCardHTML(m) {
