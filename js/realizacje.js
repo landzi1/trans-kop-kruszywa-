@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let visibleItems = [...galleryItems]; // Currently shown items (based on filter)
     let isAnimating = false; // For spam protection on arrows
     let lightboxIndex = 0; // Index within visibleItems for Lightbox
+    let lightboxTimeout;
 
     // ==================== 1. FILTERING LOGIC ====================
 
@@ -201,8 +202,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = visibleItems[lightboxIndex];
         const img = item.querySelector('img');
         if (img) {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
+            // Check if lightbox is already open (active) to decide on animation
+            if (lightbox.classList.contains('active')) {
+                lightboxImg.classList.add('fade-out');
+                
+                if (lightboxTimeout) clearTimeout(lightboxTimeout);
+
+                lightboxTimeout = setTimeout(() => {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightboxImg.classList.remove('fade-out');
+                }, 300); // Match CSS transition
+            } else {
+                // First open - instant update (lightbox container handles fade in)
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            }
         }
     }
 
