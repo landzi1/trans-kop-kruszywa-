@@ -501,7 +501,22 @@
 }
 
 @media (max-width: 576px) {
-    .catalog-grid { grid-template-columns: 1fr; }
-    .catalog-section { padding: 40px 0; }
+    .catalog-grid { grid-template-columns: 100%; }
+    .catalog-section { padding: 40px 0; overflow-x: hidden; }
     .machine-card__title { font-size: 1.25rem; }
+    
+    /* Fix Catalog Header Overflow */
+    .catalog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .sort-box, .sort-select {
+        width: 100%;
+    }
+    
+    /* Ensure Cards don't overflow */
+    .machine-card {
+        max-width: 100%;
+    }
 }
