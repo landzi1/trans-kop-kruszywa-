@@ -163,7 +163,7 @@ export const machines = [
     description: "Volvo EW160C to lider w klasie 17 ton. Maszyna oferuje płynną pracę hydrauliki i doskonałą widoczność, co zwiększa bezpieczeństwo na budowie.",
     features: ["Płynna hydraulika", "Kabina Volvo Care Cab", "Rototilt (opcja)", "Wysoka siła odspajania"],
     attachments: "Maszyna może być wyposażona w głowicę obrotową (rototilt), co znacznie zwiększa precyzję prac wykończeniowych i skarpowania.",
-    image: 'assets/img-maszyny/VOLVO EW 160C.webp'
+    image: 'assets/img-maszyny/Volvo EW 160C.webp'
   },
 
   // --- Gąsienicowe ---
@@ -315,7 +315,7 @@ export const machines = [
     description: "Zamiatarka uliczna na podwoziu ciężarowym. Niezbędna do utrzymania czystości dróg dojazdowych na placu budowy i ulic publicznych.",
     features: ["System zraszania", "Szczotki talerzowe", "Myjka ciśnieniowa ręczna", "Wydajny system ssący"],
     attachments: "Pojazd w pełni autonomiczny. Posiada własny zbiornik na wodę oraz lance do ręcznego mycia znaków lub trudno dostępnych miejsc.",
-    image: 'assets/img-maszyny/Zamiatarka IVECO.webp'
+    image: 'assets/img-maszyny/zamiatarka_IVECO.webp'
   },
 
   // ==================== KATEGORIA: ŁADOWARKI ====================

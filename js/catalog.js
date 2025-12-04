@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
         filterOptions.forEach(option => {
             option.addEventListener('click', (e) => {
                 e.preventDefault(); // Prevent default anchor behavior if any
-                
+
                 // Toggle UI state
                 option.classList.toggle('active');
-                
+
                 // Update Logic
                 updateStateFromDOM();
                 updateURL(); // Sync to URL
-                applyFiltersAndSort();
+                applyFiltersAndSort(true); // TRUE = scroll to catalog
             });
         });
 
@@ -50,18 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
             sortSelect.addEventListener('change', (e) => {
                 state.sortBy = e.target.value;
                 updateURL(); // Sync sort to URL
-                applyFiltersAndSort();
+                applyFiltersAndSort(true); // TRUE = scroll to catalog
             });
         }
 
         // 4. Handle Browser Back/Forward Buttons
         window.addEventListener('popstate', () => {
             readURL(); // Re-read URL
-            // Filters are applied inside readURL -> syncUI -> applyFiltersAndSort
+            // Filters are applied inside readURL -> syncUI -> applyFiltersAndSort (no scroll)
         });
 
-        // 5. Initial Render
-        applyFiltersAndSort();
+        // 5. Initial Render (no scroll on page load)
+        applyFiltersAndSort(false);
     }
 
     // --- URL & HISTORY MANAGEMENT ---
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function readURL() {
         const params = new URLSearchParams(window.location.search);
-        
+
         // Reset State
         state.filters = {};
         state.sortBy = 'default';
@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Sync UI (Checkboxes & Select) to match the URL State
         syncUI();
-        
-        // Apply changes
-        applyFiltersAndSort();
+
+        // Apply changes (no scroll on URL read - back/forward navigation)
+        applyFiltersAndSort(false);
     }
 
     function syncUI() {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.filters = activeFilters;
     }
 
-    function applyFiltersAndSort() {
+    function applyFiltersAndSort(shouldScroll = false) {
         // 1. Filter
         const visibleCards = cards.filter(card => {
             const isVisible = checkFilters(card);
@@ -168,6 +168,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3. Update Count
         updateCount(visibleCards.length);
+
+        // 4. Scroll to catalog grid (not section) to account for sticky sidebar
+        if (shouldScroll) {
+            const catalogGrid = document.querySelector('.catalog-grid');
+            if (catalogGrid) {
+                // Wait for DOM to update, then scroll
+                setTimeout(() => {
+                    const offset = 120; // Header + some padding
+                    const gridTop = catalogGrid.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: gridTop,
+                        behavior: 'smooth'
+                    });
+                }, 150);
+            }
+        }
     }
 
     function checkFilters(card) {
