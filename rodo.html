@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/icons/logo-transparent.png">
+    <meta name="description" content="Obowiązek informacyjny RODO - TRANS-KOP. Dowiedz się, jak przetwarzamy Twoje dane osobowe zgodnie z ogólnym rozporządzeniem o ochronie danych.">
+    <title>RODO (Obowiązek Informacyjny) | TRANS-KOP</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/home.css?v=fleetbuttons">
+    <link rel="stylesheet" href="css/preloader.css">
+
+    <style>
+        .legal-content {
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: var(--color-white); 
+            padding: 40px; 
+            border: 1px solid var(--color-gray-300);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .legal-content h2 {
+            font-family: var(--font-heading);
+            color: var(--color-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-left: 5px solid var(--color-primary);
+            padding-left: 15px;
+        }
+        .legal-content h3 {
+            font-family: var(--font-heading);
+            color: var(--color-gray-900);
+            margin-top: 25px;
+            font-size: 1.3rem;
+        }
+        .legal-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: var(--color-gray-700);
+        }
+        .legal-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            list-style: none;
+        }
+        .legal-content ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            color: var(--color-gray-700);
+        }
+        .legal-content ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+        }
+        .legal-date {
+            font-style: italic;
+            color: var(--color-gray-500);
+            margin-bottom: 30px;
+            display: block;
+        }
+        .clause-box {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <div class="header__container container">
+            <a href="index.html" class="header__logo">
+                <div class="logo-icon">
+                    <img src="assets/icons/logo-transparent.png" alt="Logo">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">TRANS<span class="logo-hyphen">-</span><strong>KOP</strong></span>
+                    <span class="logo-tagline">Stokowski</span>
+                </div>
+            </a>
+
+            <nav class="header__nav" id="mainNav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Start</a></li>
+                    <li><a href="roboty.html" class="nav__link">Roboty Ziemne</a></li>
+                    <li><a href="kruszywa.html" class="nav__link">Kruszywa</a></li>
+                    <li><a href="wynajem.html" class="nav__link">Wynajem</a></li>
+                    <li><a href="realizacje.html" class="nav__link">Realizacje</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="kontakt.html#wycena" class="header__cta btn btn--primary btn--glow">
+                    <i class="fas fa-calculator"></i>
+                    <span class="desktop-only">Wycena</span>
+                </a>
+                <a href="tel:+48789426796" class="header__phone btn btn--outline-light">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+48 789 426 796</span>
+                </a>
+            </div>
+
+            <button class="header__burger" id="burgerBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Floating Phone Button (Mobile) -->
+    <a href="tel:+48789426796" class="floating-phone">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <!-- ==================== CONTENT ==================== -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 80px; min-height: 60vh; background-color: var(--color-gray-100);">
+        <div class="container">
+            <div style="margin-bottom: 30px;">
+                <a href="index.html" style="color: var(--color-gray-500); text-decoration: none; font-weight: 500;"><i class="fas fa-arrow-left"></i> Wróć do strony głównej</a>
+            </div>
+            <h1 class="section-title" style="text-align: left; margin-bottom: 40px;">Klauzula Informacyjna RODO</h1>
+            
+            <div class="legal-content">
+                <span class="legal-date">Obowiązuje od: 25.05.2018 (Aktualizacja treści: 05.12.2025)</span>
+                
+                <div class="clause-box">
+                    <p>Zgodnie z art. 13 ust. 1 i ust. 2 ogólnego rozporządzenia o ochronie danych osobowych z dnia 27 kwietnia 2016 r. (RODO), informujemy o zasadach przetwarzania Pani/Pana danych osobowych oraz o przysługujących prawach.</p>
+                </div>
+
+                <h2>1. Administrator Danych</h2>
+                <p>Administratorem Pani/Pana danych osobowych jest:</p>
+                <p>
+                    <strong>TRANS-KOP Stokowski</strong><br>
+                    ul. Wrzosowa 1<br>
+                    43-190 Mikołów<br>
+                    NIP: [Wstawić NIP]<br>
+                    Tel: +48 789 426 796
+                </p>
+
+                <h2>2. Cele i podstawy przetwarzania</h2>
+                <p>Pani/Pana dane osobowe przetwarzane będą w celu:</p>
+                <ul>
+                    <li><strong>Zawarcia i wykonania umowy</strong> (świadczenie usług, wynajem sprzętu, sprzedaż kruszywa) – na podstawie art. 6 ust. 1 lit. b RODO.</li>
+                    <li><strong>Wypełnienia obowiązków prawnych</strong> ciążących na Administratorze (np. wystawianie faktur, księgowość) – na podstawie art. 6 ust. 1 lit. c RODO.</li>
+                    <li><strong>Realizacji prawnie uzasadnionych interesów</strong> Administratora (dochodzenie roszczeń, marketing bezpośredni własnych usług, monitoring wizyjny na terenie bazy w celach bezpieczeństwa) – na podstawie art. 6 ust. 1 lit. f RODO.</li>
+                    <li><strong>Udzielenia odpowiedzi na zapytania</strong> przesłane przez formularz kontaktowy lub e-mail – na podstawie zgody lub podjęcia działań na żądanie (art. 6 ust. 1 lit. a i b RODO).</li>
+                </ul>
+
+                <h2>3. Odbiorcy danych</h2>
+                <p>Odbiorcami Pani/Pana danych osobowych mogą być podmioty uprawnione do uzyskania danych osobowych na podstawie przepisów prawa oraz podmioty przetwarzające, realizujące usługi na rzecz Administratora (biuro rachunkowe, obsługa IT, hosting, operatorzy pocztowi, kancelarie prawne).</p>
+
+                <h2>4. Okres przechowywania danych</h2>
+                <p>Dane osobowe będą przechowywane przez okres trwania umowy, a po jej zakończeniu przez czas wymagany przepisami prawa (np. podatkowymi) lub do czasu przedawnienia ewentualnych roszczeń.</p>
+
+                <h2>5. Prawa osób, których dane dotyczą</h2>
+                <p>Posiada Pani/Pan prawo do:</p>
+                <ul>
+                    <li>Dostępu do treści swoich danych oraz prawo ich sprostowania.</li>
+                    <li>Usunięcia danych (prawo do bycia zapomnianym), ograniczenia przetwarzania.</li>
+                    <li>Prawa do przenoszenia danych.</li>
+                    <li>Prawa wniesienia sprzeciwu.</li>
+                    <li>Prawa do cofnięcia zgody w dowolnym momencie (jeśli przetwarzanie odbywa się na podstawie zgody).</li>
+                </ul>
+
+                <h2>6. Prawo wniesienia skargi</h2>
+                <p>Ma Pani/Pan prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO), gdy uzna Pani/Pan, iż przetwarzanie danych osobowych narusza przepisy RODO.</p>
+
+                <h2>7. Informacja o dobrowolności podania danych</h2>
+                <p>Podanie danych osobowych jest dobrowolne, jednakże niepodanie danych w zakresie niezbędnym do zawarcia umowy lub wystawienia faktury skutkować będzie brakiem możliwości realizacji usługi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo">
+                            <div class="logo-icon">
+                                <img src="assets/icons/logo-transparent.png" alt="Logo">
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-name">TRANS<span class="logo-hyphen">-</span><strong>KOP</strong></span>
+                            </div>
+                        </a>
+                        <p class="footer__about">
+                            Usługi budowlane: roboty ziemne, sprzedaż kruszyw oraz wynajem sprzętu. Działamy nieprzerwanie od 2022 roku.
+                        </p>
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/profile.php?id=61577808497366&locale=pl_PL" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.olx.pl/oferty/user/2Mrqu9/" target="_blank" rel="noopener noreferrer" aria-label="OLX"><i class="fas fa-tag"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__heading">Usługi</h4>
+                        <ul class="footer__links">
+                            <li><a href="roboty.html"><i class="fas fa-chevron-right"></i> Roboty Ziemne</a></li>
+                            <li><a href="kruszywa.html"><i class="fas fa-chevron-right"></i> Sprzedaż Kruszyw</a></li>
+                            <li><a href="wynajem.html"><i class="fas fa-chevron-right"></i> Wynajem Sprzętu</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav">
+                        <h4 class="footer__heading">Firma</h4>
+                        <ul class="footer__links">
+                            <li><a href="realizacje.html"><i class="fas fa-chevron-right"></i> Realizacje</a></li>
+                            <li><a href="kontakt.html"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+                            <li><a href="kontakt.html#wycena"><i class="fas fa-chevron-right"></i> Bezpłatna Wycena</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contact">
+                        <h4 class="footer__heading">Kontakt</h4>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adres siedziby</strong>
+                                <span>Mikołów 43-190 ul. Wrzosowa 1</span>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Telefon</strong>
+                                <a href="tel:+48789426796">+48 789 426 796</a>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>E-mail zarządca</strong>
+                                <a href="mailto:aaadam144@gmail.com">aaadam144@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>E-mail biuro</strong>
+                                <a href="mailto:transkop.biuro1@gmail.com">transkop.biuro1@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Godziny pracy</strong>
+                                <span>Pon-Pt: 7:00-17:00 | Sob: 8:00-14:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        &copy; 2025 TRANS-KOP. Wszelkie prawa zastrzeżone.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+                        <a href="regulamin.html">Regulamin</a>
+                        <a href="rodo.html">RODO</a>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 0.75rem; color: rgba(255, 255, 255, 0.4); margin-top: 1rem; margin-bottom: 0;">Created by RevoGMA</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Wróć na górę">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/home.js"></script>
+    <script src="js/preloader.js"></script>
+</body>
+</html>

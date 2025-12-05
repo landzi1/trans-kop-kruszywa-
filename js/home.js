@@ -530,3 +530,87 @@
     init();
   }
 })();
+
+/* ============================================================
+   COOKIE CONSENT LOGIC
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', function() {
+    initCookieConsent();
+});
+
+function initCookieConsent() {
+    // Check if user has already made a choice
+    if (localStorage.getItem('cookieConsent')) {
+        return;
+    }
+
+    // Determine path prefix for links based on current location
+    // If we are deep in folders (e.g. /blog/post.html), we need ../
+    // Simple check: count slashes in pathname excluding root
+    const pathDepth = (window.location.pathname.match(/\//g) || []).length;
+    // Adjust this logic based on your actual server structure if needed.
+    // For now, we will assume absolute paths or simple relative detection.
+    
+    let policyLink = 'polityka-prywatnosci.html';
+    
+    // Simple detection: if we are in a subfolder known to us
+    if (window.location.pathname.includes('/blog/') || 
+        window.location.pathname.includes('/uslugi/') || 
+        window.location.pathname.includes('/produkty/')) {
+        policyLink = '../polityka-prywatnosci.html';
+    }
+
+    // Generate HTML
+    const cookieHTML = `
+        <div id="cookie-consent" class="cookie-consent">
+            <div class="cookie-consent__header">
+                <i class="fas fa-cookie-bite cookie-consent__icon"></i>
+                <h3 class="cookie-consent__title">Szanujemy Twoją Prywatność</h3>
+            </div>
+            <div class="cookie-consent__body">
+                <p class="cookie-consent__text">
+                    Używamy plików cookies, aby zapewnić najlepszą jakość korzystania z naszej strony. 
+                    Dowiedz się więcej w naszej <a href="${policyLink}" class="cookie-consent__link">Polityce Prywatności</a>.
+                </p>
+                <div class="cookie-consent__actions">
+                    <button id="cookie-decline" class="btn-cookie btn-cookie--decline">Odrzuć</button>
+                    <button id="cookie-accept" class="btn-cookie btn-cookie--accept">Akceptuję</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Insert into DOM
+    document.body.insertAdjacentHTML('beforeend', cookieHTML);
+
+    const banner = document.getElementById('cookie-consent');
+
+    // SHOW ON SCROLL LOGIC
+    const handleScroll = () => {
+        if (window.scrollY > 50) { // Show after 50px scroll
+            banner.classList.add('show');
+            window.removeEventListener('scroll', handleScroll);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Handle Events
+    document.getElementById('cookie-accept').addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        closeBanner(banner);
+    });
+
+    document.getElementById('cookie-decline').addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        closeBanner(banner);
+    });
+}
+
+function closeBanner(element) {
+    element.classList.remove('show');
+    // Remove from DOM after transition
+    setTimeout(() => {
+        element.remove();
+    }, 500);
+}
